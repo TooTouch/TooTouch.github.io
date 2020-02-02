@@ -1,4 +1,33 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+header:
+  overlay_image: /assets/images/index/waterfront.jpg
+  actions:
+    - label: "About Me"
+      url: "/about/"
+excerpt: TooTouch's Daily Data Science
+feature_row:
+  - image_path: /assets/images/index/daily.jpg
+    alt: ""
+    title: "Interpretable Machine Learning"
+    excerpt: "XAI"
+    url: "/daily/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/index/portfolio.jpg
+    alt: ""
+    title: "Portfolio"
+    excerpt: "My projects"
+    url: "/portfolio/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/index/projects.jpg
+    alt: ""
+    title: "XAI Roadmap"
+    excerpt: "Tootouch's XAI Roadmap"
+    url: "/challenge/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
+
+{% include feature_row %}
