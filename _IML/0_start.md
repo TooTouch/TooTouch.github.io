@@ -1,6 +1,6 @@
 ---
 title:  "역자의 말"
-permalink: /IML/start
+permalink: /IML/start/
 ---
 
 <p align="center">
