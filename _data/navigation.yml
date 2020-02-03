@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "IML"
-    url: /IML/
+    url: /IML/introduction/
   - title: "Portfolio"
     url: /portfolio/
   - title: "XAI"
