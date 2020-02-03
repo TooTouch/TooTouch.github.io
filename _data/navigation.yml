@@ -1,12 +1,109 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about/
   - title: "IML"
-    url: /interpretable-machine-learning/
+    url: /IML/
   - title: "Portfolio"
     url: /portfolio/
   - title: "XAI"
     url: /xai-roadmap/
+
+# Interpretable Machine Learning
+IML:
+  - title: 1 Introduction
+    url: /IML/introduction/
+    children:
+      - title: "1.1 Story Time"
+        url: /IML/story_time/
+      - title: "1.2 What Is Machine Learning?"
+        url: /IML/what_is_machine_learning/
+      - title: "1.3 Terminology"
+        url: /IML/terminology/
+  - title: 2 Interpretability
+    url: /IML/interpretability/
+    children:
+      - title: "2.1 Importance of Interpretability"
+        url: /IML/inportance_of_interpretability/
+      - title: "2.2 Taxonomy of Interpretability Methodss"
+        url: /IML/taxonomy_of_interpretability_methods/
+      - title: "2.3 Scope of Interpretability"
+        url: /IML/scope_of_interpretability/
+      - title: "2.4 Evaluation of Interpretability"
+        url: /IML/evaluation_of_interpretability/
+      - title: "2.5 Properties of Explanations"
+        url: /IML/properties_of_explanations/
+      - title: "2.6 Human-friendly Explanations"
+        url: /IML/human_friendly_explanations/
+  - title: Datasets
+    url: /IML/datasets/
+    children:
+      - title: "Bike Rentals (Regression)"
+        url: /IML/bike_rentals/
+      - title: "YouTube Spam Comments (Text Classification)"
+        url: /IML/youtube_spam_comments/
+      - title: "Risk Factors for Cervical Cancer (Classification)"
+        url: /IML/cervical_cancer/
+  - title: Interpretable Models
+    url: /IML/interpretable_models/
+    children:
+      - title: "Linear Regression"
+        url: /IML/linear_regression/
+      - title: "Logistic Regression"
+        url: /IML/logistic_regression/
+      - title: "GLM, GAM and more"
+        url: /IML/glm_gam_and_more/
+      - title: "Decision Tree"
+        url: /IML/decision_tree/
+      - title: "Decision Rules"
+        url: /IML/decision_rules/
+      - title: "RuleFit"
+        url: /IML/reulfit/
+      - title: "Other Interpretable Models"
+        url: /IML/other_interpretable_models/
+  - title: Model-Agnostic Methods
+    url: /IML/model_agnostic_methods/
+    children:
+      - title: "Partial Dependence Plot (PDP)"
+        url: /IML/partial_dependence_plot/
+      - title: "Individual Conditional Expectation (ICE)"
+        url: /IML/individual_conditional_expectation/
+      - title: "Accumulated Local Effects (ALE) Plot"
+        url: /IML/accumulated_local_effects/
+      - title: "Feature Interaction"
+        url: /IML/feature_interaction/
+      - title: "Permutation Feature Importance"
+        url: /IML/permutation_feature_importance/
+      - title: "Global Surrogate"
+        url: /IML/global_surrogate/
+      - title: "Local Surrogate (LIME)"
+        url: /IML/local_surrogate/
+      - title: "Scoped Rules (Anchors)"
+        url: /IML/scoped_rules/
+      - title: "Shapley Values"
+        url: /IML/shapley_values/
+      - title: "SHAP (SHapley Additive exPlanations)"
+        url: /IML/shap/
+  - title: Example-Based Explanations
+    url: /IML/example_based_explanations/
+    children:
+      - title: "Counterfactual Explanations"
+        url: /IML/counterfactual_explanations/
+      - title: "Adversarial Examples"
+        url: /IML/adversarial_examples/
+      - title: "Prototypes and Criticisms"
+        url: /IML/prototypes_and_criticisms/
+      - title: "Influential Instances"
+        url: /IML/influential_instances/
+  - title: Neural Network Interpretation
+    url: /IML/neural_network_interpretation
+    children:
+      - title: "Learned Features"
+        url: /IML/learned_features/
+  - title: A Look into the Crystal Ball
+    url: /IML/a_look_into_the_crystal_ball
+    children:
+      - title: "The Future of Machine Learning"
+        url: /IML/the_future_of_machine_learning/
+      - title: "The Future of Interpretability"
+        url: /IML/the_future_of_interpretability/
