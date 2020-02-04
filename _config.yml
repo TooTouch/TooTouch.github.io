@@ -206,9 +206,7 @@ collections:
   IML:
     output: true
     permalink: /:collection/:path/
-  docs:
-    output: true
-    permalink: /:collection/:path/
+
 
 # Defaults
 defaults:
