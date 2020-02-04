@@ -28,7 +28,7 @@ IML:
     url: /IML/interpretability/
     children:
       - title: "2.1 Importance of Interpretability"
-        url: /IML/inportance_of_interpretability/
+        url: /IML/importance_of_interpretability/
       - title: "2.2 Taxonomy of Interpretability Methodss"
         url: /IML/taxonomy_of_interpretability_methods/
       - title: "2.3 Scope of Interpretability"
@@ -62,7 +62,7 @@ IML:
       - title: "4.5 Decision Rules"
         url: /IML/decision_rules/
       - title: "4.6 RuleFit"
-        url: /IML/reulfit/
+        url: /IML/rulefit/
       - title: "4.7 Other Interpretable Models"
         url: /IML/other_interpretable_models/
   - title: 5 Model-Agnostic Methods
