@@ -1,5 +1,5 @@
 ---
-title:  "Introduction"
+title:  "Chapter 1. Introduction"
 permalink: /IML/introduction/
 ---
 
