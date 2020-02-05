@@ -20,20 +20,20 @@ links:
 toc: true
 ---
 
-# 1. 화알못 남성을 위한 화장품 바이블
+# 화알못 남성을 위한 화장품 바이블
 
 - Member: 조하늘, 이재헌, 김진우, 허재혁  
 
-# 2. Why
+# Why
 
 1년의 올리브영 아르바이트 기간 동안, 같은 성별인 여성 고객들에게는 비교적 쉽게 추천할 수 있었으나, **남성 고객들에게 제품 추천은 매우 어렵고 생소했다**. 실제로 알바를 하며 이러한 어려움을 겪은 경우가 많았고, 이를 해결해보고자 남성들을 위한 화장품관련 데이터에 대한 분석을 결정했다.
 
-# 3. Purpose
+# Purpose
 
 1. 원하는 화장품에 대해 문장을 입력하면 관련 상품들을 추천
 2. 추천된 상품들에 대한 정보를 대시보드 형태로 요약하여 제공
 
-# 4. Data
+# Data
 
 [글로우픽(glowpick)](https://www.glowpick.com/) 데이터를 사용하여 **남성 제품** 관련 리뷰 데이터 이용
 
@@ -63,7 +63,7 @@ rate | string | 선호도 (best/good/soso/bad/worst)
 content | string | 리뷰 내용
 product_url | string | 해당 제품의 url
 
-# 5. How to Run
+# How to Run
 
 **Data Crawling**
 ```bash
@@ -81,9 +81,9 @@ $ bash preprocessing.sh
 $ bash test.sh "검색문장"
 ```
 
-# 6. Experiments
+# Experiments
 
-## 6.1. 군집분석(Clustering Analysis)
+## 군집분석(Clustering Analysis)
 
 사용자별 특성을 파악하기위해 군집 분석을 하였다. 앞서 전처리한 임베딩 벡터를 통해서 k-means 시행했다. 최적의 k를 구하기위해 1부터 9까지 k-means를 실행한 후 clustering 결과마다 Inertia 값을 비교하여 그 차이가 줄어드는 지점의 k로 결정한다.
 
@@ -121,7 +121,7 @@ Name | Description
 
 </p>
 
-## 6.2. 상품 추천(Product Recommendation)
+## 상품 추천(Product Recommendation)
 
 혼자사는 남자들을 위한 향 좋은 화장품을 찾기위해서 **"홀애비 냄새나는 남사친을 위한 향 좋은 제품"** 이라는 문장을 검색해보았다. 주변에 혼자사는 남사친들에게서 이런 생각을 해봤고 선물을 줘야하는 경우가 생겼다면 한 번 쯤 검색해서 괜찮은 제품이 뭐가 있을지 확인해볼 수 있다.
 
@@ -144,7 +144,7 @@ category	|brand	|nb_reviews|	vol_price	|product	|product_url
 
 </p>
 
-## 6.3. Cosmetic Dashboard for Man
+## Cosmetic Dashboard for Man
 
 <p align="center">
     <img src="https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man/blob/master/images/Dashboard/slide1.JPG?raw=true">

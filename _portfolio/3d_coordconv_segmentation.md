@@ -30,19 +30,19 @@ gallery:
 toc: true
 ---
 
-# 1. Grand Challenge 2017 Multi-Modality Whole Heart Segmentation
+# Grand Challenge 2017 Multi-Modality Whole Heart Segmentation
 - http://www.sdspeople.fudan.edu.cn/zhuangxiahai/0/mmwhs/
 
-# 2. Contribution
+# Contribution
 - An Intriguing Failing of Convolutional Neural Networks and the CoordConv Solution [https://arxiv.org/abs/1807.03247]
 
-# 3. Training Run
+# Training Run
 In code directory 
 ```
 > python main.py --params=ct_train.json
 ```
 
-# 4. Result
+# Result
 
 Model | Background | MLV | LABC | LVBC | RABC | RVBC | ASA | PUA | Average DSC
 ---|---|---|---|---|---|---|---|---|---
@@ -55,12 +55,12 @@ RABC: the right atrium blood cavity, RVBC: the right ventricle blood cavity, ASA
 
 {% include gallery caption="Left: Mask, Middle: U-Net 3D, Right: U-Net 3D CoordConv" %}
 
-# 5. Details  
+# Details  
 
 Data |  Number of train set | Number of validation set | Patch dim | Resize rate | Batch size | Epochs | Number of train patch image | Number of validation patch image | Metric | Loss function | Optimizer | Learning rate | Number of GPU
 ----|-----|----|---|---|---|---|---|---|---|---|---|---|---
 CT | 18 | 2 | 96 | 0.7 | 2 | 100 | 20 | 100 | Dice Similarity Coefficient | dice coefficient loss | Adam | 0.0001 | 4
 
 
-# 6. Limit
+# Limit
 The host server is down, so the test set can no longer be evaluated.
