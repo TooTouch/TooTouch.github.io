@@ -206,7 +206,9 @@ collections:
   IML:
     output: true
     permalink: /:collection/:path/
-
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -240,6 +242,16 @@ defaults:
       comments: false
       sidebar:
         nav: "IML"
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values: 
+      layout: single
+      read_time: true
+      author_profile: false
+      share: false
+      comments: false
   
 
 # Sass/SCSS
