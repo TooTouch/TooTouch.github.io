@@ -3,8 +3,6 @@ title:  "2.3 Scope of Interpretability"
 permalink: /IML/scope_of_interpretability/
 ---
 
-5:00 pm
-
 알고리즘은 모델이 예측값을 만들어낼 수 있도록 학습시킵니다. 각 단계는 투명하게 또는 해석가능하게 평가되어야 합니다.
 
 # 1. 알고리즘의 투명성
