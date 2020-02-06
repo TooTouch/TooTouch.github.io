@@ -12,7 +12,7 @@ permalink: /IML/terminology/
 
 ![https://christophm.github.io/interpretable-ml-book/images/programing-ml.png](https://christophm.github.io/interpretable-ml-book/images/programing-ml.png)
 
-**학습기(Learner)** 또는 **머신러닝 알고리즘(Machine Learning Algorithm)**은 머신러닝 모델이 데이터를 학습하기 위해 사용되는 프로그램을 말합니다. 또다른 이름은 "유도기(inducer)"이빈다. (e.g "tree inducer")
+**학습기(Learner)** 또는 **머신러닝 알고리즘(Machine Learning Algorithm)**은 머신러닝 모델이 데이터를 학습하기 위해 사용되는 프로그램을 말합니다. 또다른 이름은 "유도기(inducer)"입니다. (e.g "tree inducer")
 
 **머신러닝 모델(Machine Learning Model)**은 입력값과 예측치를 매칭하는 학습된 프로그램입니다. 선형 모델이나 신경망에서 가중치와 같은 것들을 말합니다. 모델이라고 하면 약간 애매할 수 있어서 또 다른 이름으로는 "예측기(predictor)" 또는 문제에 따라 "분류기(classifier)" 또는 "회귀 모델(regression model)"이라고도 말합니다. 수식적으로는 학습된 머신러닝 모델을 $$\hat{f}$$ 또는 $$\hat{f}(x)$$으로 나타냅니다.
 
