@@ -1,10 +1,7 @@
 ---
 title:  "2.6 Human-friendly Explanations"
 permalink: /IML/human_friendly_explanations/
-toc: true
 ---
-
-3:00 PM
 
 이번엔 사람이 "좋은" 설명으로 볼 수 있는 것과 해석가능한 머신러닝에 어떤 영향을 미치는지 더 자세히 알아봅시다. 인문학 연구(humanities research)가 도움이 될 수 있습니다. Miler(2017)는 설명에 대한 대규모 설문조사를 시행했었고 이번 장은 그에 대한 요약 내용을 다룹니다.
 
