@@ -4,7 +4,7 @@ layout: single
 permalink: /about/
 ---
 
-My name is Jaehyuk Heo (a.k.a **TooTouch**). One day, my friend told me that I look like a mole reads too touch in Korean pronunciation, and since then, my nickname is TooTouch. Actually, I'm not sure I look like a mole. :)
+My name is Jaehyuk Heo (a.k.a **TooTouch**). One day, my friend told me that I look like a mole reads "tootouch" in Korean pronunciation, and since then, my nickname is TooTouch. Actually, I'm not sure I look like a mole. :)
 
 <p align='center'> 
     <img src="https://drive.google.com/uc?id=1VAqhvfaUH4rR5fAMbkfZI1vZXASIWQXR" width="200">
@@ -20,7 +20,9 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Education</h1>
 
-<img src="https://drive.google.com/uc?id=1GGacYHAsUGvuynHO6ppU-AGtCvK3B2fh" width="200">
+<p align='center'>
+    <img src="https://drive.google.com/uc?id=1GGacYHAsUGvuynHO6ppU-AGtCvK3B2fh" width="200">
+</p>
 
 **The University of Suwon**  
 
