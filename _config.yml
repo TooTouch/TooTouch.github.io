@@ -113,9 +113,9 @@ author:
   location         : "Seoul"
   email            : "wogur379@gmail.com"
   links:
-    - label: "DNA Blog"
-      icon: "fas fa-fw fa-link"
-      url: "https://datanetworkanalysis.github.io/"
+    - label: "CV"
+      icon: "fas fa-fw fa-sticky-note"
+      url: "https://drive.google.com/open?id=1u-t1VWojvDctNLZmhEOQY0oQo2mRRvQ9"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/tootouch"
@@ -128,6 +128,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/heo_bllfpc/?hl=ko"
+    - label: "DNA Blog"
+      icon: "fas fa-fw fa-link"
+      url: "https://datanetworkanalysis.github.io/"
 
 
 # Site Footer
