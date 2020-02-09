@@ -72,7 +72,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Military Service</h1>
 
-**Korean Army, Republic of Korea, June 2014 - March 2016**
+**Korean Army, Republic of Korea**, June 2014 - March 2016
 - Served as a police officer in Seoul
 
 ---
