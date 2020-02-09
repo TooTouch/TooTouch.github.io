@@ -26,7 +26,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 **The University of Suwon**  
 
-- Bachelor of **Applied Statistics**,March 2013 - August 2019 (Advisor: [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566))
+- Bachelor of **Applied Statistics** (Advisor: [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
 - Total GPA of **4.18 / 4.5 (95 / 100)**
 
 
@@ -39,17 +39,17 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Work Experience</h1>
 
-**Dacon** 
+**Dacon**   
 *Data Scientist Intern, July 2019 - September 2019*
 - Planning and Operation of the Data Science Competition. [[website](https://dacon.io/)]  
 
 
-**Seoul National University Bundang Hospital**  
+**Seoul National University Bundang Hospital**   
 *AI Researcher, July 2018 - May 2019  (Advisors: Prof. [Tackeun Kim](https://snubh.org/medical/drIntroduce.do?DP_TP=&DP_CD=NS&sDpCdDtl=NS&sDrSid=1003835&sDrStfNo=65973&sDpTp=))*
 - Study on the Problem of Brain Neurological Diseases through Machine Learning [[website](https://www.snubh.org/index.do)]   
 
 
-**Statistical Research Institute in the University of Suwon**  
+**Statistical Research Institute in the University of Suwon**   
 *Research Intern, June 2016 - June 2018* (Advisors: Prof. [Seokhoon Yun](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1951544))
 - Investigation of Disease and Damage of Farmers and Fishermen by Rural Development Administration and Ministry of Oceans and Fisheries
 
@@ -63,34 +63,42 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Teaching</h1>
 
-**Presentation Deep Learning Workshop at SNUBH**, June 2019
+**Presentation Deep Learning Workshop at SNUBH**  
+*June 2019*
 - Seminar for doctors and nurses interested in deep learning in the Seoul National University Bundang Hospital Presented basic concepts of deep learning and hands-on course  
 
-**Mentoring Program at the University of Suwon**, September 2016 - December 2017
+**Mentoring Program at the University of Suwon**  
+*September 2016 - December 2017*
 - Worked as a mentor in basic statistics at the Center for the Development of Teaching and Learning at the University of Suwon Covered probability distribution, statistical inference, regression, analysis of variance, non-parametric statistics and time series analysis Teaching over 30 students twice a week answered questions in person and online and marked assignments
 
 ---
 <h1 align='center'>Military Service</h1>
 
-**Korean Army, Republic of Korea**, June 2014 - March 2016
+**Korean Army, Republic of Korea**  
+*June 2014 - March 2016*
 - Served as a police officer in Seoul
 
 ---
 <h1 align='center'>Projects</h1>
 
-**Translation of the Interpretable Machine Learning**, December 2019 - Fabruary 2020
+**Translation of the Interpretable Machine Learning**  
+*December 2019 - Fabruary 2020*
 - Translated Christoph Molnar's Interpretable Machine Learning book Translation in Korean [[blog](https://tootouch.github.io/IML/start/)]
 
-**White Box in Computer Vision**, October 2019 - January 2020
+**White Box in Computer Vision**
+*October 2019 - January 2020*
 - Implement using Pytorch for the explainable methods studied in the computer vision Registering packages as tootorch with The Python Package Index [[code](https://github.com/TooTouch/WhiteBox-Part1)][[PyPI](https://pypi.org/project/tootorch/)]
 
-**Cosmetic Recommendation for Man**, October 2019 - January 2020
+**Cosmetic Recommendation for Man**   
+*October 2019 - January 2020*
 - Composition of cosmetic recommendation dashboard for men using cosmetics review data [[code](https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man)][slides]
 
-**KBO Scouting Challenge**, March 2019 - May 2019
+**KBO Scouting Challenge**  
+*March 2019 - May 2019*
 - KBO Foreign picher data to analyze the recommendation of scouting in 2019 3rd place among 15 teams [[leaderboard](https://dacon.io/competitions/official/68346/codeshare/424)]
 
-**KBO Baseball Data Challenge**, Fabruary 2019 - March 2019
+**KBO Baseball Data Challenge**  
+*Fabruary 2019 - March 2019*
 - Prediction of KBO regular league hitters' OPS in 2019 7th place among 115 teams [[leaderboard](https://dacon.io/competitions/official/62540/leaderboard/)]
 
 
@@ -115,7 +123,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Online Courses</h1>
 
-**Google Advanced Machine Learning Study Jam** 
+**Google Advanced Machine Learning Study Jam**   
 *Google Korea, June 2019 - July 2019*
 - End-to-End Machine Learning with TensorFlow on GCP in Coursera [[certification](https://drive.google.com/open?id=1z-y_VUX7-5ienhD1N9ZN-5tol4H1f-vW)]
 - Production Machine Learning Systems in Coursera [[certification](https://drive.google.com/open?id=1refyaX537tuODz6mSHsPbb6H0QIoVcsQ)]
