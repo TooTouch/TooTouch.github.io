@@ -39,14 +39,14 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Work Experience</h1>
 
-**Dacon** [[website](https://dacon.io/)]  
+**Dacon** 
 *Data Scientist Intern, July 2019 - September 2019*
-- Planning and Operation of the Data Science Competition.
+- Planning and Operation of the Data Science Competition. [[website](https://dacon.io/)]  
 
 
-**Seoul National University Bundang Hospital** [[website](https://www.snubh.org/index.do)]    
+**Seoul National University Bundang Hospital**  
 *AI Researcher, July 2018 - May 2019  (Advisors: Prof. [Tackeun Kim](https://snubh.org/medical/drIntroduce.do?DP_TP=&DP_CD=NS&sDpCdDtl=NS&sDrSid=1003835&sDrStfNo=65973&sDpTp=))*
-- Study on the Problem of Brain Neurological Diseases through Machine Learning
+- Study on the Problem of Brain Neurological Diseases through Machine Learning [[website](https://www.snubh.org/index.do)]   
 
 
 **Statistical Research Institute in the University of Suwon**  
@@ -104,9 +104,9 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Other Leadership and Activites</h1>
 
-**Artificial Intelligence College**} [[website](http://aic.yangjaehub.com/)]  
+**Artificial Intelligence College**  
 *ModuLabs, October 2019 - Present*
-- Research of explainable artificial intelligence research in Computer Vision
+- Research of explainable artificial intelligence research in Computer Vision [[website](http://aic.yangjaehub.com/)] 
 
 **Data Science Comunity**   
 *Data Network Analysis, DNA, August 2019 - Present*
@@ -115,7 +115,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Online Courses</h1>
 
-**Google Advanced Machine Learning Study Jam** [[website](https://sites.google.com/view/studyjamkr/home)]
+**Google Advanced Machine Learning Study Jam** 
 *Google Korea, June 2019 - July 2019*
 - End-to-End Machine Learning with TensorFlow on GCP in Coursera [[certification](https://drive.google.com/open?id=1z-y_VUX7-5ienhD1N9ZN-5tol4H1f-vW)]
 - Production Machine Learning Systems in Coursera [[certification](https://drive.google.com/open?id=1refyaX537tuODz6mSHsPbb6H0QIoVcsQ)]
