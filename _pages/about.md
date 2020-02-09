@@ -34,7 +34,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 <h1 align='center'> Publication</h1>
 
 
-[1] Kim, T., \underline{Heo, J.}, Jang, D. K., Sunwoo, L., Kim, J., Lee, K. J., ... & Oh, C. W. (2019). Machine learning for detecting moyamoya disease in plain skull radiography using a convolutional neural network. EBioMedicine, 40, 636-642. [[pdf](https://www.sciencedirect.com/science/article/pii/S2352396418306200)]
+[1] Kim, T., Heo, J., Jang, D. K., Sunwoo, L., Kim, J., Lee, K. J., ... & Oh, C. W. (2019). Machine learning for detecting moyamoya disease in plain skull radiography using a convolutional neural network. EBioMedicine, 40, 636-642. [[pdf](https://www.sciencedirect.com/science/article/pii/S2352396418306200)]
 
 ---
 <h1 align='center'>Work Experience</h1>
