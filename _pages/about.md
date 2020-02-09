@@ -85,7 +85,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 *December 2019 - Fabruary 2020*
 - Translated Christoph Molnar's Interpretable Machine Learning book Translation in Korean [[blog](https://tootouch.github.io/IML/start/)]
 
-**White Box in Computer Vision**
+**White Box in Computer Vision**  
 *October 2019 - January 2020*
 - Implement using Pytorch for the explainable methods studied in the computer vision Registering packages as tootorch with The Python Package Index [[code](https://github.com/TooTouch/WhiteBox-Part1)][[PyPI](https://pypi.org/project/tootorch/)]
 
