@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/portfolio/bigcontest/bg.jpg
 sidebar:
   - title: "Role"
-    image: /assets/images/portfolio/3d_coordconv/MMWHS2017_bg.gif
+    image: /assets/images/portfolio/bigcontest/bg.jpg
     image_alt: "logo"
     text: "Model exaplanation and presentation."
   - title: "Responsibilities"
