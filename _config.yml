@@ -69,9 +69,9 @@ search                   : true
 search_full_content      : true
 search_provider          : algolia
 algolia:
-  application_id         : X4JCWAA5HD
-  index_name             : tootouch_xai_blog
-  search_only_api_key    : 55a20bc4adba4dc2a5983f7645b0ab28
+  application_id         : 3NN3SE81GT
+  index_name             : tootouch blog
+  search_only_api_key    : 94e9956bbf40453f59ccf18d4b323d15
   powered_by             : true # true (default), false
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
