@@ -12,7 +12,11 @@ sidebar:
     text: "Identify the benefits of a model and interpret it to understand its prediction."
   - title: "Period"
     text: "2019.7 - 2019.9"
-toc: true
+links: 
+  - title: "Presentation"
+    label: "PDF"
+    icon: "fab fa-fw fa-sticky-note"
+    url: "https://drive.google.com/open?id=1Q9tAspfZKh_zH4lZiSGL1L0h0_Hpy6qG" 
 ---
 
 # Contest Reviews

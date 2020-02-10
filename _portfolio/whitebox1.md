@@ -13,10 +13,15 @@ sidebar:
   - title: "Period"
     text: "2019.10 - 2020.1"
 links: 
-  - title: "Project Repository"
+  - title: "Project Contents"
     label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/TooTouch/WhiteBox-Part1" 
+  - title: "Presentation"
+    label: "PDF"
+    icon: "fab fa-fw fa-sticky-note"
+    url: "https://drive.google.com/open?id=1G851uCGxf2awPAqtMRDPCNmqANuJG8Y0" 
+
 toc: true
 ---
 

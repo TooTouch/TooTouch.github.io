@@ -17,6 +17,10 @@ links:
     label: "GitHub"
     icon: "fab fa-fw fa-github"
     url: "https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man" 
+  - title: "Presentation"
+    label: "PDF"
+    icon: "fab fa-fw fa-sticky-note"
+    url: "https://drive.google.com/open?id=1vA1rFLl2KlK7KsjcF9K5fRyLKpa3qMjW" 
 toc: true
 ---
 

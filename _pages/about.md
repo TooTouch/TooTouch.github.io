@@ -87,11 +87,11 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 **White Box in Computer Vision**  
 *October 2019 - January 2020*
-- Implement using Pytorch for the explainable methods studied in the computer vision Registering packages as tootorch with The Python Package Index [[code](https://github.com/TooTouch/WhiteBox-Part1)][[PyPI](https://pypi.org/project/tootorch/)]
+- Implement using Pytorch for the explainable methods studied in the computer vision Registering packages as tootorch with The Python Package Index [[code](https://github.com/TooTouch/WhiteBox-Part1)][[PyPI](https://pypi.org/project/tootorch/)][[slide](https://drive.google.com/open?id=1G851uCGxf2awPAqtMRDPCNmqANuJG8Y0)]
 
 **Cosmetic Recommendation for Man**   
 *October 2019 - January 2020*
-- Composition of cosmetic recommendation dashboard for men using cosmetics review data [[code](https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man)][slides]
+- Composition of cosmetic recommendation dashboard for men using cosmetics review data [[code](https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man)][[slides]](https://drive.google.com/open?id=1vA1rFLl2KlK7KsjcF9K5fRyLKpa3qMjW0)
 
 **KBO Scouting Challenge**  
 *March 2019 - May 2019*
