@@ -24,7 +24,7 @@ and u should.d check my channel and tell me what I should do next!	| 1
 
 유튜브에서도 이 댓글들을 확인할 수 있습니다. 단, 한번 들어갔다가 유튜브에 빠지지 않길 바랍니다. 결국 해변에서 원숭이가 관광객들의 칵테일을 훔쳐마시는 영상을 보고있게 될수도 있습니다. 구글 스팸 탐지기는 2015년 이후로 많이 변경됐을 것입니다.
 
-[파격적인 조회수를 나타내는 "강남 스타일"을 여기서 확인해보실 수 있습니다. ](https://www.youtube.com/watch?v=9bZkp7q19f0&feature=player_embedded)
+[엄청난 조회수를 기록한 "강남 스타일"을 여기서 확인해보실 수 있습니다.](https://www.youtube.com/watch?v=9bZkp7q19f0&feature=player_embedded)
 
 이 데이터를 통해서 무언가 해보고 싶으시다면 이 책의 Github repository에서 몇가지 간편한 함수들이 있는 [RData 파일](https://github.com/christophM/interpretable-ml-book/blob/master/R/get-cervical-cancer-dataset.R)과 [R-script](https://github.com/christophM/interpretable-ml-book/blob/master/data/cervical.RData)를 확인해보실 수 있습니다.
 

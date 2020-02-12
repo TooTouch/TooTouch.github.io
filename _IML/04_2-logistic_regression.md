@@ -103,8 +103,7 @@ $$\frac{odds_{x_j+1}}{odds}=exp\left(\beta_{j}(x_{j}+1)-\beta_{j}x_{j}\right)=ex
 
 연속형 특성("Num. of diagnosed STDs")에 대한 해석: 다른 특성들이 모두 같은 값이라는 가정하에, 진단된 STDs(성병) 수의 증가는 암 vs 암이 아닌 odds를 2.26만큼 변화(증가)시킵니다. 상관성은 인과성이 아니라는 것을 유의해야합니다.
 
-범주형 특성("Hormanal contraceptives y/n")의 해석: 
-Interpretation of a categorical feature ("Hormonal contraceptives y/n"): 호르몬 피익약을 사용하는 여성의 경우 암 vs 암이 아닌 odds는 다른 모든 특성이 같은 값을 가진다는 가정하에 사용하지 않은 여성에 비해 0.89 만큼 더 낮아집니다. 
+범주형 특성("Hormanal contraceptives y/n")의 해석: 호르몬 피익약을 사용하는 여성의 경우 암 vs 암이 아닌 odds는 다른 모든 특성이 같은 값을 가진다는 가정하에 사용하지 않은 여성에 비해 0.89 만큼 더 낮아집니다. 
 
 선형 모델과 마찬가지로 해석은 할상 '다른 모든 특성이 같은 값을 가진다'는 가정이 필요합니다.
 
