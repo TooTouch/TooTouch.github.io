@@ -119,7 +119,7 @@ $$\frac{odds_{x_j+1}}{odds}=exp\left(\beta_{j}(x_{j}+1)-\beta_{j}x_{j}\right)=ex
 
 로지스틱 회귀는 이진 분류에서 다중 분류로 확장할 수 있습니다. 이를 다항 회귀라고 부릅니다.
 
-### 소프트웨어
+# 소프트웨어
 
 모든 예시에서는 R의 `glm`을 사용했습니다. 
 I used the `glm` function in R for all examples. Python, Java, Stata, Matlab 등 데이터 분석을 할 수 있는 프로그래밍 언어에서 로지스틱 회귀를 확인하실 수 있습니다.
