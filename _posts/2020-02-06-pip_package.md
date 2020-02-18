@@ -57,7 +57,7 @@ GradCAM example이라는데 내가 구현한거랑 방식이 굉장히 유사하
     pip install wheel
     pip install twine
 
-# Repository
+## Repository
 
 Repo는 github에서 만들면된다. 만드는 부분은 여기서 생략하겠다. 
 
@@ -67,7 +67,7 @@ Repo는 github에서 만들면된다. 만드는 부분은 여기서 생략하겠
     <img src='https://drive.google.com/uc?id=1ByprtTC8WFJtSHjVhidyzTDrtc9LGcVj' /><br>
 </p>
 
-# setup.py
+## setup.py
 
 우선 setup.py를 통해서 기본 설정을 정해야한다. 아래 내용을 그대로 가져다 붙이고 각 옵션들을 본인에 코멘트로 달아놓은 설명에 맞게 본인 내용으로 작성하면된다. 첫 release라면 version은 0.1로 하는게 좋다.
 
@@ -109,14 +109,14 @@ Repo는 github에서 만들면된다. 만드는 부분은 여기서 생략하겠
     <img src='https://drive.google.com/uc?id=1CwUEY7BIrFLkgmPoPDMNuknSizU5ZTP_' width='600'/><br>
 </p>
 
-# setup.ckg
+## setup.ckg
 
 이 부분 그냥 아래내용을 그대로 붙여넣기하면 된다. Description 파일을 어떤걸로 쓸것인지 물어보는 파일이다.
 
     [metadata]
     description-file = README.md
 
-# Release 파일 만들기
+## Release 파일 만들기
 
 Release 파일을 만드는 방법은 간단하다 github repo에 들어가서 화면과 같이 release라고 써있는 곳을 들어간다.
 
