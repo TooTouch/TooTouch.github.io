@@ -1,6 +1,7 @@
 ---
-title: "Posts by Category"
+title: "Tootouch's Interest"
 layout: categories
 permalink: /categories/
 author_profile: true
 ---
+
