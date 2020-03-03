@@ -68,7 +68,7 @@ Shapley value는 모든 가능한 조합에 대해서 하나의 특성의 기여
     <i>모든 특성값을 고려해서 Shapley value를 얻기위해서는 먼저 각 특성값에 대해 평균값으로부터 예측값의 차이를 나타내는 분포를 얻어야한다. </i>
 </p>
 
-# 3. Examples and Interpretation
+# 3. 예시와 해석
 
 특성값 $$j$$ 에 대한 Shapley value의 해석 : $$j$$ 번째 특성값은 데이터셋에 대한 평균 예측값과 비교하여 특정 관측치를 예측하는데 $$\phi_j$$ 만큼의 기여도를 가진다.
 
@@ -184,11 +184,11 @@ $$\phi_j+\phi_j^{+}$$
 
 많은 의사결정나무를 평균내어 예측을 하는 Random forest를 학습했다고 가정해보자. Additivity 속성은 각 특성값에 대해서 Shapley value를 각 트리별로 개별적으로 계산할 수 있고 평균내어 random forest에서 특성값들에 대해 Shapley value를 구할 수 있다는 것을 말한다.
 
-## 4.2. Intuition
+## 4.2. 이해
 
 직관적으로 Shapley value를 이해할 수 있는 방법은 이렇게 설명해 볼 수 있다. : 특성값이 무작위로 나열되어 방에 들어온다. 방에 있는 모든 특성값은 게임에 참여한다(= 예측치에 기여한다). 특성값의 Shapley value는 특성값이 연합에 참여할때 이미 방에 있던 연합이 얻은 예측치의 평균적인 변화이다.
 
-## 4.3. Estimating the Shapley Value
+## 4.3. Shapley Value 추정
 
 특성값의 모든 가능한 연합은 정확한 Shapley value를 계산하기위해서 j번째 특성이 있는 것과 없는 것 모두 평가되어야만 한다. 특성 수가 커짐에 따라 가능한 연합의 수가 기하급수적으로 늘어나기때문에 Shapley value를 계산하는 정확한 방법이 오히려 문제가 될 수 있다. Strumbelj et al. (2014)는 몬테카를로 샘플링(Monte-Carlo sampling)으로 추정치를 구하는 방법을 제안한다 [^3].
 
@@ -223,7 +223,7 @@ $$\phi_j(x)=\frac{1}{M}\sum_{m=1}^M\phi_j^{m}$$
 
 모든 Shapley value는 이와같은 과정을 각 특성마다 반복하며 계산된다.
 
-# 5. Advantages
+# 5. 장점
 
 Shapley values의 Efficiency 속성에 따라 각 예측치와 평균 예측치간의 차이는 각 관측치의 특성값 사이에 공평하게 분포되어있다. 이 속성은 LIME같은 방법과 Shapley value를 구분해준다. LIME은 예측치가 특성들 간의 공평하게 분포되어 있지 않다. Shapley value는 **모델 전체를 완전히 설명할 수 있는 유일한 방법일 것이다.** Shapley value는 확고한 이론적 기반과 공평하게 효과가 분포해있기 때문에 [EU의 "right to explanations"](https://en.wikipedia.org/wiki/Right_to_explanation)와 같이 법률이 설명을 필요로하는 상황에서  사용할 수 있는 유일한 합법적인 방법일 것이다. 
 
@@ -233,7 +233,7 @@ Shapley value는 **이론적인 배경이 탄탄하다.** Efficiency, symmetric,
 
 특성값에 의한 게임으로 예측을 설명한다는 것이 정말 놀랍다.
 
-# 6. Disadvantages
+# 6. 단점
 
 Shapley value는 연산량이 너무 많다. 현실의 문제들 중 99.9%에서는 추정방법만이 사용가능하다. 특성들의 가능한 조합(2^k)과 특성의 "결측(absence)"은 아무 관측치로 대체하는 것(이로인해 Shapley value 추청값의 분산이 증가한다.)까지 모두 고려하기 때문에 연산 비용이 너무 크다. 연합의 지수적 크기는 샘플링과 반복횟수 M을 제한해서 대처할 수 있다. M을 줄이는 것만으로도 연산 시간을 줄일 수 있지만 Shapley value의 분산을 키울 수 있다. M에 대한 최적의 수가 따로 정해진건 없다. M은 Shapley value를 정확히 추정하기위해 크면 클 수록 좋다. 그러나 적당한 시간에 계산을 할 수 있는 정도로 정하면된다. [Chernoff bounds](http://math.mit.edu/~goemans/18310S15/chernoff-notes.pdf)를 기반으로 M을 선택할수도 있지만 기계 학습 예측을 위해 Shapley values를 구하는데 사용하는 경우는 본적이 없다.
 
@@ -247,7 +247,7 @@ Shapley value는 LIME과 다르게 설명가능한 모델이 아닌 단순히 �
 
 다른 permutation을 기반으로한 해석 방법들과 같이 Shapley value는 특성간 상관관계가 있는 경우 비현실적인 관측치를 포함하는 것에서 어려움이 있다. 연합에서 특성값이 누락되는 것을 시뮬레이션하기위해 특성치를 한계화(marginalize)한다. 이 과정은 특성치의 한계 분포(marginal distribution)에서 값을 샘플링하여 구할 수 있다. 이 방법은 특성들이 서로 독립이면 문제가 되지 않지만 독립이 아닌 경우에는 관측치에 맞지 않은 특성값을 추출하게 될 수 있다. 그러나 이 방법으로 특성에 대한 Shapley value를 구할 수 있다. 내가 아는 한에서는 이러한 방법이 Shapley value에 어떤 의미가 있는지 어떻게 수정할 수 있을까에 대한 연구가 없었다. 한가지 방법으로는 상관관계가 있는 특성들을 같이 permute하여 특성들에 대한 하나의 Shapley value를 구하는 것이다. 또는 상관관계가 있는 특성들을 고려해서 샘플링 과정을 조정하는 방법이 있을 수 있다.
 
-# 7. Software and Alternatives
+# 7. 소프트웨어 및 대안책
 
 Shapley value는 R 패키지인 `iml`에 구현되어있다.
 
