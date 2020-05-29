@@ -33,8 +33,9 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'> Publication</h1>
 
+[1] Heo, J., Park, S.J., Kang, S. et al. Prediction of Intracranial Aneurysm Risk using Machine Learning. Sci Rep 10, 6921 (2020). [[paper](https://www.nature.com/articles/s41598-020-63906-8#citeas)]
 
-[1] Kim, T., Heo, J., Jang, D. K., Sunwoo, L., Kim, J., Lee, K. J., ... & Oh, C. W. (2019). Machine learning for detecting moyamoya disease in plain skull radiography using a convolutional neural network. EBioMedicine, 40, 636-642. [[pdf](https://www.sciencedirect.com/science/article/pii/S2352396418306200)]
+[2] Kim, T., Heo, J., Jang, D. K., Sunwoo, L., Kim, J., Lee, K. J., ... & Oh, C. W. (2019). Machine learning for detecting moyamoya disease in plain skull radiography using a convolutional neural network. EBioMedicine, 40, 636-642. [[paper](https://www.sciencedirect.com/science/article/pii/S2352396418306200)]
 
 ---
 <h1 align='center'>Work Experience</h1>
