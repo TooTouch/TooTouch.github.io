@@ -3,6 +3,10 @@ title:  "역자의 말"
 permalink: /IML/start/
 ---
 
+# Interpretable Machine Learning
+
+## 해석가능한 머신 러닝
+
 <p align="center">
     <img src='https://drive.google.com/uc?id=18ff1TLXk9bxrKAB9Q_Yrze9xbMru3vOQ' width='500'/><br>
     <i>Interpretable Machine Learning E-book</i>
