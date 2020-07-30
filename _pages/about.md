@@ -26,7 +26,8 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 **The University of Suwon**  
 
-- Bachelor of **Applied Statistics** (Advisor: [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
+- Bachelor of **Applied Statistics** (Advisor: Prof. [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
+- Major GPA of **4.43 / 4.5**
 - Total GPA of **4.18 / 4.5 (95 / 100)**
 
 
@@ -48,7 +49,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 
 **Seoul National University Bundang Hospital**   
-*AI Researcher, July 2018 - May 2019  (Advisors: Prof. [Tackeun Kim](https://snubh.org/medical/drIntroduce.do?DP_TP=&DP_CD=NS&sDpCdDtl=NS&sDrSid=1003835&sDrStfNo=65973&sDpTp=))*
+*AI Researcher, July 2018 - May 2019*  (Advisors: Prof. [Tackeun Kim](https://snubh.org/medical/drIntroduce.do?DP_TP=&DP_CD=NS&sDpCdDtl=NS&sDrSid=1003835&sDrStfNo=65973&sDpTp=))
 - Study on the Problem of Brain Neurological Diseases through Machine Learning [[website](https://www.snubh.org/index.do)]   
 
 
@@ -104,6 +105,9 @@ My research interests are **interpretable artificial intelligence** and **comput
 *Fabruary 2019 - March 2019*
 - Prediction of KBO regular league hitters' OPS in 2019 7th place among 115 teams [[leaderboard](https://dacon.io/competitions/official/62540/leaderboard/)]
 
+**Segmentation using 3D convolutional neural network**  
+*October 2018 - January 2019*  
+- Medical Image Segmentation using 3D convolutional neural network in Modulab [[pdf](https://drive.google.com/file/d/1US3CMxdBlI631BS0vmS7gMXZnCD91zTg/view)][[code](https://github.com/TooTouch/3D_CoordConv_Segmentation)]
 
 ---
 <h1 align='center'>Technical Skills</h1>
@@ -115,13 +119,13 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Other Leadership and Activites</h1>
 
-**Artificial Intelligence College**  
-*ModuLabs, October 2019 - Present*
-- Research of explainable artificial intelligence research in Computer Vision [[website](http://aic.yangjaehub.com/)] 
-
 **Data Science Comunity**   
 *Data Network Analysis, DNA, August 2019 - Present*
 - Host of community for those interested in data analytics Periodically share information and projects through workshops and meetings with 10 members [[notion](http://bit.ly/DNA_homepage)][[blog](https://datanetworkanalysis.github.io/)]
+
+**Artificial Intelligence College**  
+*ModuLabs, October 2019 - May 2020*
+- Research of explainable artificial intelligence research in Computer Vision [[website](http://aic.yangjaehub.com/)] 
 
 ---
 <h1 align='center'>Online Courses</h1>
