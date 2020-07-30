@@ -8,8 +8,8 @@ main:
     url: /portfolio/
   - title: "Daily Life"
     url: /categories/
-  - title: "XAI Roadmap"
-    url: https://www.notion.so/tootouch/TooTouch-s-XAI-Research-Roadmap-96e13030376a491d9a5f031868c4618f
+  - title: "Research"
+    url: https://www.notion.so/tootouch/TooTouch-s-Research-Roadmap-96e13030376a491d9a5f031868c4618f
   - title: "DNA"
     url: https://datanetworkanalysis.github.io/
 
