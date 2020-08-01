@@ -101,12 +101,12 @@ Hackers Assistance
 
 **requirements.txt**
 
-코드를 실행하기 위한 모듈들에 대한 정보를 제공해주어야 github action을 사용할 때 필요한 모듈을 설치할 수 있다. 코드를 작성하며 사용된 모듈은 크게 3가지 이다. pandas는 없어도 될 줄 알았는데 없으니까 모듈이 없다고 에러가 생긴다. 크롤링은 selenium과 beautifulsoup4를 사용했고 노션에 데이터를 입력하는일은 notion을 사용했다.
+코드를 실행하기 위한 모듈들에 대한 정보를 제공해주어야 github action을 사용할 때 필요한 모듈을 설치할 수 있다. 코드를 작성하며 사용된 모듈은 크게 3가지 이다. pandas는 없어도 될 줄 알았는데 없으니까 모듈이 없다고 에러가 생긴다. 크롤링은 selenium과 beautifulsoup4를 사용했고 노션에 데이터를 입력하는일은 notion과 notionist를 사용했다. [notionist](https://github.com/TooTouch/notionist)는 이전에 기존 notion api는 collection을 불러와서 dataframe 형태로 불러오는데 불편함을 느껴 만든 모듈이다.
 
 ```
-
 selenium==3.141.0
 notion==0.0.25
+notionist==0.2
 pandas==1.0.3
 beautifulsoup4==4.7.1
 ```
@@ -127,8 +127,10 @@ beautifulsoup4==4.7.1
     - 가져온 데이터를 노션 페이지에 테이블로 생성한다
 6. get_schema_comments  
     - 노션 테이블 속성을 정의한다
+7. update_comments_table
+    - 기존에 작성된 테이블과 비교하여 업데이트 한다.
 
-**main.py**
+**<main.py>**
 
 위에서 작성한 함수들을 호출해서 하나씩 딱딱 써주면 끝이다. os.environ을 사용한 이유는 코드 실행을 위해 필요한 입력값이 노출되면 안되기 때문에 github settings에서 secrets을 통해 key와 value를 입력하면 노출되지않고 몰래 입력값을 사용할 수 있다.
 
@@ -147,12 +149,13 @@ if __name__=='__main__':
     boards_info, driver = get_board_urls(driver)
     total_df = get_comment_urls(driver, boards_info)
     print('[COMPLETE] Number of boards with comments: ',total_df.shape[0])
+
     add_notion(token_v2, ha_notion, total_df)
     print('[COMPLETE] Create a table in Notion')
 ```
 
 
-**python-app.yml**
+**<python-app.yml>**
 
 github action을 사용하기 위해서는 이와 같이 세팅값이 필요하다. Workflows에 대한 구조는 위에 변성윤님의 글을 다시 참고하면 된다. 
 
