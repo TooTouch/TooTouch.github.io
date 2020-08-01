@@ -130,7 +130,7 @@ beautifulsoup4==4.7.1
 7. update_comments_table
     - 기존에 작성된 테이블과 비교하여 업데이트 한다.
 
-**<main.py>**
+**main.py**
 
 위에서 작성한 함수들을 호출해서 하나씩 딱딱 써주면 끝이다. os.environ을 사용한 이유는 코드 실행을 위해 필요한 입력값이 노출되면 안되기 때문에 github settings에서 secrets을 통해 key와 value를 입력하면 노출되지않고 몰래 입력값을 사용할 수 있다.
 
@@ -155,7 +155,7 @@ if __name__=='__main__':
 ```
 
 
-**<python-app.yml>**
+**python-app.yml**
 
 github action을 사용하기 위해서는 이와 같이 세팅값이 필요하다. Workflows에 대한 구조는 위에 변성윤님의 글을 다시 참고하면 된다. 
 
