@@ -2,8 +2,6 @@
 main:
   - title: "About"
     url: /about/
-  - title: "IML"
-    url: /IML/start/
   - title: "Portfolio"
     url: /portfolio/
   - title: "Daily Life"
@@ -15,8 +13,6 @@ main:
 
 # Interpretable Machine Learning
 IML:
-  - title: 0. 역자의말
-    url: /IML/start/
   - title: 1 Introduction
     url: /IML/introduction/
     children:
