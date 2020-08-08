@@ -20,10 +20,6 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Education</h1>
 
-<p align='center'>
-    <img src="https://drive.google.com/uc?id=1GGacYHAsUGvuynHO6ppU-AGtCvK3B2fh" width="200">
-</p>
-
 **The University of Suwon**  
 
 - Bachelor of **Applied Statistics** (Advisor: Prof. [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
@@ -95,7 +91,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 **Cosmetic Recommendation for Man**   
 *October 2019 - January 2020*
-- Composition of cosmetic recommendation dashboard for men using cosmetics review data [[code](https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man)][[slides]](https://drive.google.com/open?id=1vA1rFLl2KlK7KsjcF9K5fRyLKpa3qMjW0)
+- Composition of cosmetic recommendation dashboard for men using cosmetics review data [[code](https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man)][[slides](https://drive.google.com/open?id=1vA1rFLl2KlK7KsjcF9K5fRyLKpa3qMjW0)]
 
 **KBO Scouting Challenge**  
 *March 2019 - May 2019*
