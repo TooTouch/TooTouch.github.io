@@ -1,7 +1,7 @@
 ---
 title: "토플 조교하다가 코딩한 썰"
 categories: 
-    - Activities
+    - Activity
 toc: true
 ---
 
