@@ -11,6 +11,7 @@ toc: true
     <img width='200' src='https://vignette.wikia.nocookie.net/pokemon/images/4/4c/%EB%94%94%EA%B7%B8%EB%8B%A4_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png/revision/latest/scale-to-width-down/340?cb=20170405005424&path-prefix=ko'><br>귀여운 디그다
 </p>
 
+
 내 평생 디그다는 두더지이자 두더지는 디그다라고 생각했다 (두더지 이코르 디그다). 생각했다는 건 이제는 그렇게 생각하지 못한다는 것이다. 내가 알던 디그다는 두더지가 아니였다. 그러나 디그다를 보고 두더지가 아니라고 생각하는 사람은 드물 것이다. 심지어 구글에 '두더지 캐릭터'라고 입력하면 디그다가 나온다!
 
 <p align='center'>
@@ -20,7 +21,7 @@ toc: true
 누구나 한번쯤 디그다 땅속 이미지를 생각해본적 있을 것이다. 디그다 머리아래에는 분명 두더지의 팔과 긴 손톱이 있을거다라는 확신을 가지고 있었을 것이다!
 
 <p align='center'>
-    <img width='400' src='https://upload2.inven.co.kr/upload/2015/12/30/bbs/i13668586336.jpg'><br>디그다가 약하다고 누가 그랬냐...
+    <img width='400' src='https://user-images.githubusercontent.com/37654013/90329323-d3f4f000-dfde-11ea-861d-4e4f3a553d03.jpg'><br>디그다가 약하다고 누가 그랬냐...
 </p>
 
 그러나 어제 누가 투터지가 무슨 뜻이냐라고 물어봤고 두더지라서 지었다부터 시작해서 그래서 캐릭터도 디그다라고 얘기했는데 처음으로 디그다의 실체를 알게되었다... 내가 알던 디그다는 저 그림처럼 땅속에 어마어마한 근육질 몸을 가지도 있던 디그다 형이 아니었다. 
