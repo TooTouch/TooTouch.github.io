@@ -72,11 +72,11 @@ from multiprocessing import Process
 
 다음은 다른 부차적인 모듈이다. 각각 주로 실험할 때 주로 사용하는 모듈이다. 하나씩 설명하자면, 
 
-우선 rich! rich는 비교적 최근에 공개된 UI 모듈(?)이다. 기존에 칙칙했던 터미널 화면에서 벗어나게 해줄 구세군같은 존재이다. 사용 방법도 굉장히 간단하므로 [riㅊh github](https://github.com/willmcgugan/rich)에서 확인하면 된다. 
+우선 rich! rich는 비교적 최근에 공개된 UI 모듈(?)이다. 기존에 칙칙했던 터미널 화면에서 벗어나게 해줄 구세군같은 존재이다. 사용 방법도 굉장히 간단하므로 [rich github](https://github.com/willmcgugan/rich)에서 확인하면 된다. 
 
 다음은 pandas이다. 아마 python을 사용하면서 pandas를 모르는 사람은 없을거라 생각된다. 여기서 pandas를 사용한 이유는 I/O 차이를 실험해 보기 위함이었다. 이후 예시에서 얘기해보기로 한다.
 
-그 외 argparse는 실행명령어와 함께 인자(argument)를 넘기기위해 사용했고 여기서 인자는 for문을 얼마나 돌릴건지와 iteration 수와 어떤 방법으로 실험할 것인지이다. 
+그 외 argparse는 실행명령어와 함께 인자(argument)를 넘기기위해 사용했고 여기서 인자는 for문을 얼마나 돌릴건지와 어떤 방법으로 실험할 것인지이다. 
 
 
 ```python
@@ -191,6 +191,8 @@ sudo apt install htop
 <p align='center'>
     <img src='https://user-images.githubusercontent.com/37654013/91686024-24e81500-eb97-11ea-9d7d-2074424ee15f.png'>
 </p>
+
+동영상은 모바일에서 보니 옆에가 짤려서 나온다.. 가로 비율이 높은 화면에서 보면 전체화면이 나오니 궁금하신분은 데스크톱에서 보시길..
 
 <p align='center'>
     <script id="asciicast-32izQtxa6jceRe5V4A8WFgxC5" src="https://asciinema.org/a/32izQtxa6jceRe5V4A8WFgxC5.js" async></script><br>코드 실행 화면
