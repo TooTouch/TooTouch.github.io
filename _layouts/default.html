@@ -15,6 +15,13 @@
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    <!-- SCM Music Player https://www.scmplayer.net -->
+    <script type="text/javascript" src="https://www.scmplayer.net/script.js" 
+    data-config="{'skin':'skins/simpleGreen/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'%uB098%uBBF8 - %uAC00%uAE4C%uC774 %uD558%uACE0 %uC2F6%uC740 %uADF8%uB300','url':'https://youtube.com/watch?v=08pndJKdJFg&feature=share'},{'title':'%uC0E4%uD504 - %uC5F0%uADF9%uC774 %uB05D%uB09C %uD6C4','url':'https://youtube.com/watch?v=36u3s430p8E&feature=share'}]}" ></script>
+    <!-- SCM Music Player script end -->
+
+
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
@@ -37,11 +44,9 @@
     </div>
 
     {% include scripts.html %}
+    
 
   </body>
-  <!-- SCM Music Player https://www.scmplayer.net -->
-  <script type="text/javascript" src="https://www.scmplayer.net/script.js" 
-  data-config="{'skin':'skins/tunes/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'%uB098%uBBF8 - %uAC00%uAE4C%uC774 %uD558%uACE0 %uC2F6%uC740 %uADF8%uB300','url':'https://music.youtube.com/watch?v=08pndJKdJFg&feature=share'}]}" ></script>
-  <!-- SCM Music Player script end -->
+  
 
 </html>
