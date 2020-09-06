@@ -41,10 +41,10 @@ GRE를 공부하는 사람은 알겠지만, Verbal에서 주로 나오는 주제
 
 # 지구 온난화의 요인
 
-지구 온난화는 크게 **자연적 요인**와 **인위적 요인**으로 나눌 수 있다[^19]. 자연적 요인은 크게 세 가지로 볼 수 있는데 태양에너지의 변화, 화산 폭발에 의한 변화, 그리고 지구 움직임의 변화이다. 지구 움직임의 변화라면 밀란코비치 주기(Milankovitch Cycle)를 나타낸다. 이는 지구에 빙하기가 반복되었던 원인이라고 할 수 있다. 밀란코비치 주기는 그림과 같이 크게 세 가지 요소가 있는데 첫 번째로는 이심률(eccentricity), 자전축의 기울기(tilt), 그리고 자전축의 세차운동(precession)이 있다[^20].
+지구 온난화는 크게 **자연적 요인**와 **인위적 요인**으로 나눌 수 있다[^19]. 자연적 요인은 크게 세 가지로 볼 수 있는데 태양에너지의 변화, 화산 폭발에 의한 변화, 그리고 지구 움직임의 변화이다. 지구 움직임의 변화라면 밀란코비치 주기(Milankovitch Cycle)를 나타낸다. 이는 지구에 빙하기가 반복되었던 원인이라고 할 수 있다. 밀란코비치 주기는 그림 1과 같이 크게 세 가지 요소가 있는데 첫 번째로는 이심률(eccentricity), 자전축의 기울기(tilt), 그리고 자전축의 세차운동(precession)이 있다[^20].
 
 <p align='center'>
-    <img width='600' src='https://useruploads.socratic.org/8OASTNsTEYX6Q7BTTAXP_milankovitch-theory-26-638.jpg'><br>그림 . 밀란코비치의 세 가지 요소
+    <img width='600' src='https://useruploads.socratic.org/8OASTNsTEYX6Q7BTTAXP_milankovitch-theory-26-638.jpg'><br>그림 1. 밀란코비치의 세 가지 요소
 </p>
 
 인위적 요인은 사람에 의한 영향을 나타낸다. 대표적으로 온실가스 및 에어러솔의 증가 그리고 산림파괴 및 환경변화가 있다.
@@ -56,64 +56,64 @@ GRE를 공부하는 사람은 알겠지만, Verbal에서 주로 나오는 주제
 
 이후 2017년 나오지 않았으면 좋았을 불편한 진실2가 나오게 되는데 2006년 나왔던 불편한 진실1에서 나온 진실들이 사실은 불편하지 않았던 사람들에 의해 등장하게 되었다. 10년이라는 세월에 어느새 앨 고어형의 머리는 백발이 되었고 그동안 수많은 정치적인 문제로 인해 어려움을 느껴서인지 두 번의 대선을 도전하지 않는다고 한다. 또한 10년 전과 다른 점은 이전보다 소리높여 강력하게 주장한다는 점이었다.
 
-불편한 진실에서는 처음 그림과 같이 **온실현상**으로 점점 더 많은 열이 나가지 못하고 지구를 뜨겁게 만들어 지구 온난화가 점점 더 격상하고 있다고 얘기한다[^10].
+불편한 진실에서는 처음 그림 2과 같이 **온실현상**으로 점점 더 많은 열이 나가지 못하고 지구를 뜨겁게 만들어 지구 온난화가 점점 더 격상하고 있다고 얘기한다[^10].
 
 <p align='center'>
-    <img width='500' src='http://blog.nigurha.com/wp-content/uploads/2019/02/green-house-effects.png'><br>그림: greenhouse effect illustration
+    <img width='500' src='http://blog.nigurha.com/wp-content/uploads/2019/02/green-house-effects.png'><br>그림 2: greenhouse effect illustration
 </p>
 
-온실 현상의 주된 원인은 **이산화탄소의 증가**이다. 이산화탄소로 인한 온실 현상은 이전에서 주기적으로 계속 있었다. 과거 기상청도 없던 시절의 이산화탄소의 농도와 온도를 아는 방법이 있는데 그 방법이 바로 **'빙하 코어(ice core)'** 이다. 빙하 코어는 그림과 같이 빙하를 원기둥 모양으로 뽑아내어 그동안 빙하가 축적되어온 과정을 분석하는 방법이다[^7]. 빙하 코어에서 알 수 있는 정보는 그 해의 온도, 강수량, 공기 중 구성요소 등 다양한 정보를 얻을 수 있고, 알려진 바로는 약 80만 년 전까지의 데이터를 얻을 수 있다고 한다[^6].
+온실 현상의 주된 원인은 **이산화탄소의 증가**이다. 이산화탄소로 인한 온실 현상은 이전에서 주기적으로 계속 있었다. 과거 기상청도 없던 시절의 이산화탄소의 농도와 온도를 아는 방법이 있는데 그 방법이 바로 **'빙하 코어(ice core)'** 이다. 빙하 코어는 그림 3과 같이 빙하를 원기둥 모양으로 뽑아내어 그동안 빙하가 축적되어온 과정을 분석하는 방법이다[^7]. 빙하 코어에서 알 수 있는 정보는 그 해의 온도, 강수량, 공기 중 구성요소 등 다양한 정보를 얻을 수 있고, 알려진 바로는 약 80만 년 전까지의 데이터를 얻을 수 있다고 한다[^6].
 
 <p align='center'>
-    <img width='500' src='https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_IceCores/Images/greenland_drilling.jpg'><br>그림. 빙하 코어 추출 과정
+    <img width='500' src='https://earthobservatory.nasa.gov/ContentFeature/Paleoclimatology_IceCores/Images/greenland_drilling.jpg'><br>그림 3. 빙하 코어 추출 과정
 </p>
 
-아래 그림은 빙하 코어를 통해 얻은 현재(당시 2008년도에 발표된 데이터지만 데이터를 보니 present가 2008년이 아닌 약 100년 전인듯하다)부터 약 80만년 전까지의 온도와 $$CO_2$$ 그래프이다[^4][^5][^8].  
+아래 그림 4은 빙하 코어를 통해 얻은 현재(당시 2008년도에 발표된 데이터지만 데이터를 보니 present가 2008년이 아닌 약 100년 전인듯하다)부터 약 80만년 전까지의 온도와 $$CO_2$$ 그래프이다[^4][^5][^8].  
 
 <p align='center'>
-    <img width='500' src='https://www.ncdc.noaa.gov/sites/default/files/Temperature-change-and-carbon-dioxide-change-measured-from-the-EPICA-Dome-C-ice-core-in-Antarctica-v2.jpg'><br>그림. 지난 80만년 간 CO2 농도와 온도의 변화
+    <img width='500' src='https://www.ncdc.noaa.gov/sites/default/files/Temperature-change-and-carbon-dioxide-change-measured-from-the-EPICA-Dome-C-ice-core-in-Antarctica-v2.jpg'><br>그림 4. 지난 80만년 간 CO2 농도와 온도의 변화
 </p>
 
-그러나 주의해서 보아야 할 것은 바로 최근 $$CO_2$$의 급격한 증가 현상이다. 지난 1,000년 간 $$CO_2$$ 농도 상승률을 보면 그 사실을 알 수 있다. 그림에서는 지난 1,000년 간 300ppm이 넘지 않았던 $$CO_2$$ 농도가 급격하게 상승하여 현재는 **414ppm**까지 오른 것을 알 수 있다[^3]. 주목할 점은 $$CO_2$$의 상승과 함께 평균 온도 또한 계속해서 증가한다는 것이다. 
+그러나 주의해서 보아야 할 것은 바로 최근 $$CO_2$$의 급격한 증가 현상이다. 지난 1,000년 간 $$CO_2$$ 농도 상승률을 보면 그 사실을 알 수 있다. 그림 5에서는 지난 1,000년 간 300ppm이 넘지 않았던 $$CO_2$$ 농도가 급격하게 상승하여 현재는 **414ppm**까지 오른 것을 알 수 있다[^3]. 주목할 점은 $$CO_2$$의 상승과 함께 평균 온도 또한 계속해서 증가한다는 것이다. 
 
 <p align='center'>
-    <img width='600' src='https://www.climate.gov/sites/default/files/global_temp_vs_carbon_dioxide_graph_620.gif'><br>그림: 지난 약 1,000년 간 CO2와 온도 변화, 온도는 20세기 평균 온도와의 차이를 나타낸다. 
+    <img width='600' src='https://www.climate.gov/sites/default/files/global_temp_vs_carbon_dioxide_graph_620.gif'><br>그림 5: 지난 약 1,000년 간 CO2와 온도 변화, 온도는 20세기 평균 온도와의 차이를 나타낸다. 
 </p> 
 
 영화에서는 기온이 올라가게 되면 지구에 어떤 영향은 크게 **해수면 상승**, **생태계 파괴**, **늘어나는 자연재해**가 있겠다.
 
 **해수면 상승으로 인한 피해**
 
-남북극 빙하의 녹는 속도가 가속됨에 따라 발생하는 해수면 상승이 있다. 특히 북극은 더 빠르게 녹는 속도가 가속화될 수 있는데 이는 그림과 같이 열을 흡수하는 해양의 면적이 점차 넓어짐에 따라 빙하의 속도가 빨라지는 것으로 볼 수 있다[^9].
+남북극 빙하의 녹는 속도가 가속됨에 따라 발생하는 해수면 상승이 있다. 특히 북극은 더 빠르게 녹는 속도가 가속화될 수 있는데 이는 그림 6과 같이 열을 흡수하는 해양의 면적이 점차 넓어짐에 따라 빙하의 속도가 빨라지는 것으로 볼 수 있다[^9].
 
 <p align='center'>
-    <img width='500' src='https://www.exploratorium.edu/sites/default/files/images/Sunlight-on-Ice-vs-No-Ice(1).gif'><br>그림 . 빙하는 햇빛의 90%를 다시 반사하는데 반해 해수면은 햇빛의 94%를 흡수한다. 출처: https://www.exploratorium.edu/climate/ice
+    <img width='500' src='https://www.exploratorium.edu/sites/default/files/images/Sunlight-on-Ice-vs-No-Ice(1).gif'><br>그림 6. 빙하는 햇빛의 90%를 다시 반사하는데 반해 해수면은 햇빛의 94%를 흡수한다. 출처: https://www.exploratorium.edu/climate/ice
 </p>
 
 [NSIDC (National Snow & Ice Data Center)](https://nsidc.org/data/seaice_index) 에서는 과거 1981~2010년까지의 빙하 면적으로부터 최근까지 줄어든 면적을 최근 날짜로 확인할 수 있다.
 
 <p align='center'>
-    <img width='400' src='https://nsidc.org/data/seaice_index/images/N_monthly_bm_extent.png'><br>그림 . 1981~2010년 빙하 면적(분홍색 라인)에 비해 현저히 줄어든 2020년 8월 북극의 빙하 면적. 
+    <img width='400' src='https://nsidc.org/data/seaice_index/images/N_monthly_bm_extent.png'><br>그림 7. 1981~2010년 빙하 면적(분홍색 라인)에 비해 현저히 줄어든 2020년 8월 북극의 빙하 면적. 
 </p>
 
 해수면이 상승하면서 해안 지역의 수많은 이재민이 발생하게 될 것이고 이 수는 수천만에서 수억까지 달할 정도로 큰 피해로 다가올 것이라고 경고한다. 2020년 기준 현재 세계 인구가 약 78억 명, 앞으로 계속 늘어날 인구에 비해 사람이 살 수 있는 곳이 줄어들고 있는 현실을 고려하면 심각한 문제라고 볼 수 있다. 
 
 **생태계 파괴**
 
-평균 온도가 급격하게 올라감에 따라 철새들의 이주 기간이 달라지고 그림[^11]과 같이 부화 시기도 점차 앞당겨지면서 먹이가 가장 풍부한 시기에 제대로 된 먹이를 공급하지 못하게 될 가능성이 높아지게 된다. 이처럼 기존 생태계의 균형이 여럿 깨지기 시작했다. 또한, 해수면의 증발뿐만 아니라 지표면 또한 증발하게 되면서 수많은 종이 멸종해나가기 시작한다. 하나둘 어긋나면서 나비효과와 같이 전체적인 균형이 무너진다면 결국 인간에게까지 피해가 오기 시작할 것이다.
+평균 온도가 급격하게 올라감에 따라 철새들의 이주 기간이 달라지고 그림 8[^11]과 같이 부화 시기도 점차 앞당겨지면서 먹이가 가장 풍부한 시기에 제대로 된 먹이를 공급하지 못하게 될 가능성이 높아지게 된다. 이처럼 기존 생태계의 균형이 여럿 깨지기 시작했다. 또한, 해수면의 증발뿐만 아니라 지표면 또한 증발하게 되면서 수많은 종이 멸종해나가기 시작한다. 하나둘 어긋나면서 나비효과와 같이 전체적인 균형이 무너진다면 결국 인간에게까지 피해가 오기 시작할 것이다.
 
 <p align='center'>
-    <img width='500' src='http://www.bitsofscience.org/wordpress-3.0.1/wordpress/images/2017/12/temporal-mismatch-migratory-birds-climate-change.jpg'><br>그림 . 2주나 앞당겨진 부화 시기
+    <img width='500' src='http://www.bitsofscience.org/wordpress-3.0.1/wordpress/images/2017/12/temporal-mismatch-migratory-birds-climate-change.jpg'><br>그림 8. 2주나 앞당겨진 부화 시기
 </p>
 
 **늘어나는 자연 재해**
 
-빙하가 녹고 해수면이 따뜻해지면서 증발하는 양이 많아지게 되면 기류에도 큰 영향을 미치게 된다. 이러한 요인들이 태풍의 발생 위치와 강도를 높이는 것은 이미 잘 알려진 사실이다[[^12]. 그 외에도 비 폭탄 (rain bomb)이 일어나는 곳이 있지만 어느 한 곳에서는 전례 없던 가뭄이 오기도 한다[^13][^14].
+빙하가 녹고 해수면이 따뜻해지면서 증발하는 양이 많아지게 되면 기류에도 큰 영향을 미치게 된다. 이러한 요인들이 태풍의 발생 위치와 강도를 높이는 것은 이미 잘 알려진 사실이다[^12]. 그 외에도 그림 9와 같이 비 폭탄 (rain bomb)이 일어나는 곳이 있지만 어느 한 곳에서는 전례 없던 가뭄이 오기도 한다[^13][^14].
 
 <p align='center'>
     <img width='300' src='https://i.ytimg.com/vi/a_G2KRzha7o/maxresdefault.jpg'>
     <img src='https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2F465142a/MediaObjects/41586_2010_Article_BF465142a_Figa_HTML.jpg'>
-    <br>그림 . 이상 기후로 인한 비폭탄과 그와 대비되는 전례없는 가뭄
+    <br>그림 9. 이상 기후로 인한 비폭탄과 그와 대비되는 전례없는 가뭄
 </p>
 
 
@@ -125,10 +125,10 @@ GRE를 공부하는 사람은 알겠지만, Verbal에서 주로 나오는 주제
 
 **기후 변화가 인위적이라는 증거 있어!?**
 
-지구 온난화를 일으킨 기후 변화가 인위적인 요인이라는 것은 2009년 Doran의 survey paper에서 조사된 바 있다. 조사 대상은 총 10,257명의 **지구 과학자들**이었고, 이 중 90% 이상이 박사학위 소지자였다. 질문은 크게 두 가지였고 질문1은 **'1800년 이전과 비교했을 때, 지구 온도가 올랐는가, 내렸는가, 아니면 상대적으로 일정한가?'** 이고 질문2는 **'이러한 기후 변화에 미치는 영향이 인간 때문이라고 생각하는가?'** 였다. 그 결과 아래 그림과 같이 첫 번째 질문에 90%가 '올랐다'라고 대답하였고 두 번째 질문에는 82%가 '그렇다'라고 응하였다[^16].
+지구 온난화를 일으킨 기후 변화가 인위적인 요인이라는 것은 2009년 Doran의 survey paper에서 조사된 바 있다. 조사 대상은 총 10,257명의 **지구 과학자들**이었고, 이 중 90% 이상이 박사학위 소지자였다. 질문은 크게 두 가지였고 질문1은 **'1800년 이전과 비교했을 때, 지구 온도가 올랐는가, 내렸는가, 아니면 상대적으로 일정한가?'** 이고 질문2는 **'이러한 기후 변화에 미치는 영향이 인간 때문이라고 생각하는가?'** 였다. 그 결과 아래 그림 10과 같이 첫 번째 질문에 90%가 '올랐다'라고 대답하였고 두 번째 질문에는 82%가 '그렇다'라고 응하였다[^16].
 
 <p align='center'>
-    <img src='https://skepticalscience.com/images/poll_scientists.gif'><br>그림 . 질문 2에 대한 응답률
+    <img src='https://skepticalscience.com/images/poll_scientists.gif'><br>그림 10. 질문 2에 대한 응답률
 </p>
 
 또한 조사에 응한 지구 과학자 중 **기후 과학자** 79명을 한정하여 결과를 확인하였을 때, 질문 1에 대해 96.2%(79 중 76명)가 '올랐다' 그리고 97.4%(77 중 75명)이 '그렇다'라고 하였다. 이러한 사실로 나사에서도 '기후 변화의 원인이 인간에 의한 활동이라고 전문가의 97%가 인정하였다'라고 주장했다[^16]. 
@@ -159,10 +159,10 @@ GRE를 공부하는 사람은 알겠지만, Verbal에서 주로 나오는 주제
 그러나 사실 지금까지 얘기는 지금부터 할 얘기를 꺼내고 싶었기 때문에 쓴 내용이다. 지난해 인공지능 분야의 대가들이 모여 만든, 국힙계의 '동전 한 잎' 또는 '119 remix'같은 느낌으로 기후 변화에 대해 적극적으로 문제를 논의하고 해결하자 하여 **'Climate Change AI'** (이하 CCGI)가 생겼다. 오늘로 하면 약 1년 정도 되었다고 볼 수 있겠다.
 
 <p align='center'>
-    <img src='https://user-images.githubusercontent.com/37654013/92324449-c0d4bd80-f07c-11ea-8b31-19ac58692870.png'><br>그림 . 머신 러닝을 통해 기후 변화를 해결하고자 참여한 인사들
+    <img src='https://user-images.githubusercontent.com/37654013/92324449-c0d4bd80-f07c-11ea-8b31-19ac58692870.png'><br>그림 11. 머신 러닝을 통해 기후 변화를 해결하고자 참여한 인사들
 </p>
 
-그림과 같이 인공 지능을 공부한다면 한 번쯤 들어봤을 이름들과 수많은 연구소에서 대거 참여한 전례 없는 ~~(내 기준)~~ 논문이라 생각된다. 저 인사들이 한 자리에 있다는 상상을 하니 마이클 잭슨의 'We are the world'의 뮤비가 생각나지 않을 수 없다.
+그림 11과 같이 인공 지능을 공부한다면 한 번쯤 들어봤을 이름들과 수많은 연구소에서 대거 참여한 전례 없는 ~~(내 기준)~~ 논문이라 생각된다. 저 인사들이 한 자리에 있다는 상상을 하니 마이클 잭슨의 'We are the world'의 뮤비가 생각나지 않을 수 없다.
 
 ## **[Climate Change AI](https://www.climatechange.ai/)**
 
