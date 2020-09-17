@@ -1,7 +1,7 @@
 ---
 title: "AI against COVID-19"
 categories: 
-    - Thinking
+    - Research
 toc: true
 ---
 

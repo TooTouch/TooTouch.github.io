@@ -1,8 +1,7 @@
 ---
 title:  "How to Explain AI (AI를 설명하는 방법)"
 categories: 
-    - Paper Review
-    - XAI
+    - Research
 toc: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "지구 온난화에 대해 ARABOZA (feat. AI)"
 categories: 
-    - Thinking
+    - Research
 toc: true
 ---
 
