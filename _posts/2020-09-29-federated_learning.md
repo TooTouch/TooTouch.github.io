@@ -5,6 +5,14 @@ categories:
 toc: true
 ---
 
+얼마 전 대학원 면접을 통해 새롭게 알게 된 방법이 있었으니 바로 Federated Learning(FL) 이다. 그동안 궁금했던 건데 왜 진작 못 들어 봤을까 하는 아쉬움이 크다. 
+
+병원에서 일하면서 느꼈던 점 중 하나는 연구 결과에서도 그렇고 병원마다 가지고 있는 데이터가 같은 질병에 대해서도 인구통계학적으로나 여러 방면에서 꽤 다르다는 것을 알게 되었다[^23]. 그렇게 해서 시작한 과제가 CDM 사업으로 알았고 미국에서는 잘된다고 들어서 한국에도 아주대 병원을 중심으로 잘되어 있는 줄 알았다. 그러나 하나둘씩 잘되고 있다는 소식은 거의 없었고 내 기억 속에서는 그냥저냥 잊혀 가고 있었다. 
+
+그러다가 최근에 알게 된 FL을 인제야 찾아보게 되었다. 최근에 정말 여러 가지로 의료 쪽에서 많은 연구가 있는 것 같다. Neural ODE도 그렇고 참 좋은 방법들인 거 같은데 왜 그동안 사람들의 눈에 잘 안 띄었을까 싶은 생각이 든다. ~~내가 안 찾아본 거다.~~ 
+
+어쨌든 이렇게 알게 된거 배경과 방법 그리고 연구 방향은 어떻게 있는지 찾아보았다.
+ 
 # Introduction 
 
 ## 정의
@@ -214,5 +222,7 @@ NVIDIA에서는 이 연구를 통해 연합 학습을 사용하는 플랫폼인 
 [^21]: [Understanding Differential Privacy](https://towardsdatascience.com/understanding-differential-privacy-85ce191e198a), 1 Jul 2019, An Nguyen
 
 [^22]: [Differential Privacy Overview](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf), Apple
+
+[^23]: Kim, T., Heo, J., Jang, D. K., Sunwoo, L., Kim, J., Lee, K. J., ... & Oh, C. W. (2019). [Machine learning for detecting moyamoya disease in plain skull radiography using a convolutional neural network.](https://www.sciencedirect.com/science/article/pii/S2352396418306200) EBioMedicine, 40, 636-642.
 
 
