@@ -13,7 +13,7 @@ toc: true
 
 모델 학습 시 랜덤한 값을 갖는 경우는 여러 경우가 있지만, 대표적으로 랜덤하게 할당하는 초기 가중치와 augmentation에 사용되는 random 값이 대표적이다. 이를 위해 부분별로 필요한 randomness를 제어할 수 있는 기능이 필요하다.
 
-## Random Seed Code
+## Random Seed 코드
 
 각 부분별로 randomness를 제어할 수 있는 코드를 하나로 모았다. 아래 코드를 요약하자면 간단하다. 하지만 이걸 다 실험하면서 찾아주신 분들께는 감사드린다는 말씀을 드리면서.. 간단 요약!
 
@@ -81,19 +81,22 @@ trainer = pl.Trainer(
 trainer.fit(model)
 ```
 
-실험을 위한 파이프 라인은 위의 main.py에 random seed 위치에 따라 크게 세 가지로 나누었다. 그리고 재구현이 되는지를 확인하기 위해 각각 두 번씩 반복해서 모델을 학습했다.
+학습에 사용한 설정값은 다음과 같다.
+
+```python
+BATCH_SIZE = 32
+EPOCH = 30
+LEARNING_RATE = 0.0001
+```
+
+## 위치별 설정
+
+실험을 위한 파이프 라인은 위의 main.py에 random seed 위치에 따라 크게 세 가지로 나누었다. 그리고 재구현이 되는지를 확인하기 위해 각각 두 번씩 반복해서 모델을 학습했다. 
 
 1. **Random seed가 없는 상태** (version 0, version 1)
 2. **학습기 설정 전** (version 2, version 3)
 3. **모델 생성 전** (version 4, version 5)
 
-학습에 사용한 설정값은 다음과 같다.
-
-```python
-BATCH_SIZE = 64
-EPOCH = 30
-LEARNING_RATE = 0.0001
-```
 
 # Result
 
@@ -101,9 +104,7 @@ LEARNING_RATE = 0.0001
 
 - [실험 결과 한 번에 보기](https://tensorboard.dev/experiment/X7NncAhBQcG30feR09sN4Q/#scalars&runSelectionState=eyJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzAiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzEiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzIiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzMiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzQiOnRydWUsImxpZ2h0bmluZ19sb2dzL3ZlcnNpb25fNSI6dHJ1ZX0%3D&_smoothingWeight=0.605)!
 
-
-
-## Random seed가 없는 상태
+## 1. Random seed가 없는 상태
 
 첫 번째로 random seed를 설정하지 않은 상태에서 비교한 두 번의 학습 로그이다. Epoch 단위로 비교했을 때는 꽤 비슷해 보일 수 있지만, 실제 값을 보면 차이가 있음을 알 수 있다.  
 
@@ -118,7 +119,7 @@ LEARNING_RATE = 0.0001
 </p>
 
 
-## 학습기 생성 전 
+## 2. 학습기 생성 전 
 
 두 번째로 random seed를 모델 생성 후 그리고 학습기 설정 전 사이에서 고정한 수 학습을 하였다. 그 결과 역시 epoch 단위로 보았을 때 첫 번째와 마찬가지로 거의 똑같아 보이지만 실제로 그 값의 차이가 있다. 
 
@@ -133,7 +134,7 @@ LEARNING_RATE = 0.0001
 </p>
 
 
-## 모델 생성 전 
+## 3. 모델 생성 전 
 
 마지막으로 모델 생성 전에 random seed를 고정한 후 학습을 한 결과이다. Epoch 단위로 보았을 때 똑같은 값이 그래도 재현되었음을 알 수 있다. 
 
@@ -147,7 +148,6 @@ Batch 단위로 보았을 때도 정확히 일치함을 알 수 있다.
     <img src='https://user-images.githubusercontent.com/37654013/95957819-2ca80400-0e3b-11eb-843d-18b0afcdd2f2.gif'>
 </p>
 
-
 # 결과
 
 실험적으로 확인했을 때 **seed 고정은 모델 생전 바로 전**이 가장 적합해 보인다. 모델 생성 전이 아닌 최상단에 seed를 고정하는 경우 실험 과정 중 모델 생성 전 코드 실행에서 중간에 추가되는 환경 변화의 차이가 있을 수 있기 때문에 seed 고정은 모델 생성 전으로 하는 것이 최선이라고 생각한다. 
@@ -156,11 +156,13 @@ Batch 단위로 보았을 때도 정확히 일치함을 알 수 있다.
 
 # 부록
 
-**실험코드**
+## 실험코드
 
 실험에서 pytorch-lightning 을 사용해봤는데 굉장히 편리했지만 뭔가 아직은 찝찝한 것들이 있긴하다. 확실히 모든 것에 편할 수는 없나보다. model.py의 코드는 pytorch-lightning에서 제공하는 [example code](https://colab.research.google.com/github/PytorchLightning/pytorch-lightning/blob/master/notebooks/01-mnist-hello-world.ipynb)를 활용했고 수정한 부분은 tensorboard에 train과 validation의 로그를 출력하는 부분 정도이다.
 
 이번에 처음 pytorch-lightning을 사용해봤는데 굉장히 편리하다. LightningModule 클래스를 상속해서 모델 클래스를 만들 수 있는데 아직 써보지 못했다면 한 번쯤 구조를 확인해봐도 좋을 것 같아서 첨부한다.
+
+
 
 **model.py**
 
@@ -305,7 +307,7 @@ class LitMNIST(pl.LightningModule):
             self.mnist_test = MNIST(self.data_dir, train=False, transform=self.transform)
 
     def train_dataloader(self):
-        return DataLoader(self.mnist_train, batch_size=32)
+        return DataLoader(self.mnist_train,batch_size=32)
 
     def val_dataloader(self):
         return DataLoader(self.mnist_val, batch_size=32)
