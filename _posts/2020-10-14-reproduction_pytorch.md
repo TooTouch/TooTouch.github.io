@@ -102,7 +102,7 @@ LEARNING_RATE = 0.0001
 
 결과는 tensorboard dev로 업로드한 링크에서 확인할 수 있다. 
 
-- [실험 결과 한 번에 보기](https://tensorboard.dev/experiment/X7NncAhBQcG30feR09sN4Q/#scalars&runSelectionState=eyJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzAiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzEiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzIiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzMiOmZhbHNlLCJsaWdodG5pbmdfbG9ncy92ZXJzaW9uXzQiOnRydWUsImxpZ2h0bmluZ19sb2dzL3ZlcnNpb25fNSI6dHJ1ZX0%3D&_smoothingWeight=0.605)!
+- [실험 결과 한 번에 보기](https://tensorboard.dev/experiment/QY5qQxAeTRGwcahNUWT6cA/#scalars&_smoothingWeight=0.538)!
 
 ## 1. Random seed가 없는 상태
 
@@ -158,10 +158,11 @@ Batch 단위로 보았을 때도 정확히 일치함을 알 수 있다.
 
 ## 실험코드
 
-실험에서 pytorch-lightning 을 사용해봤는데 굉장히 편리했지만 뭔가 아직은 찝찝한 것들이 있긴하다. 확실히 모든 것에 편할 수는 없나보다. model.py의 코드는 pytorch-lightning에서 제공하는 [example code](https://colab.research.google.com/github/PytorchLightning/pytorch-lightning/blob/master/notebooks/01-mnist-hello-world.ipynb)를 활용했고 수정한 부분은 tensorboard에 train과 validation의 로그를 출력하는 부분 정도이다.
+실험에서 pytorch-lightning 을 사용해봤는데 굉장히 편리했지만 뭔가 아직은 찝찝한 것들이 있긴하다. 확실히 모든 것에 편할 수는 없나보다. model.py의 코드는 pytorch-lightning에서 제공하는 [example code](https://colab.research.google.com/github/PytorchLightning/pytorch-lightning/blob/master/notebooks/01-mnist-hello-world.ipynb)를 활용했고 수정한 부분은 tensorboard에 train과 validation의 로그를 출력하는 부분 정도이다. 실험과정에 사용된 코드는 여기서도 확인 가능하다. 
+
+**Github repo**: https://tootouch.github.io/setting/reproduction_pytorch/
 
 이번에 처음 pytorch-lightning을 사용해봤는데 굉장히 편리하다. LightningModule 클래스를 상속해서 모델 클래스를 만들 수 있는데 아직 써보지 못했다면 한 번쯤 구조를 확인해봐도 좋을 것 같아서 첨부한다.
-
 
 
 **model.py**
