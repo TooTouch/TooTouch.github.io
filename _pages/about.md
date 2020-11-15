@@ -56,9 +56,15 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Honors amd Awards</h1>
 
-**Bigcontest 2019 Champion League - Grand Prize**  
-*National Information Society Agency ([NIA](https://www.nia.or.kr/site/nia_kor/main.do)), July 2019 - September 2019*
-- Data Analysis Contest sponsored by the Ministry of Science and ICT Predicting users churn considering residual value of users through the activity of Lineage users [[pdf](https://drive.google.com/open?id=1Q9tAspfZKh_zH4lZiSGL1L0h0_Hpy6qG)][[reviews](https://tootouch.github.io/portfolio/2019_bigcontest/)]
+**Korea Consumption Trend Visualization - 1st**  
+*[KDX (Korea Data eXchange)](https://kdx.kr/main), October 2020*
+- Korea consumption trend visualization contest sponsered by National Information Society Agency (NIA). 
+- We prized 3,000,000 won and took 1st rank among 86 teams
+
+**Bigcontest 2019 Champion League - 2nd**  [[pdf](https://drive.google.com/open?id=1Q9tAspfZKh_zH4lZiSGL1L0h0_Hpy6qG)][[reviews](https://tootouch.github.io/portfolio/2019_bigcontest/)]  
+*[National Information Society Agency (NIA)](https://www.nia.or.kr/site/nia_kor/main.do), July 2019 - September 2019*
+- Data analysis contest sponsored by the Ministry of Science and ICT Predicting users churn considering residual value of users through the activity of Lineage users. 
+- We prized 3,000,000 won and took 2nd rank among 1,362 teams
 
 ---
 <h1 align='center'>Teaching</h1>
