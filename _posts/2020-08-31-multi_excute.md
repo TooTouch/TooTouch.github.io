@@ -1,7 +1,7 @@
 ---
 title: "Python 실행시간 2배 이상 줄이는 방법"
 categories: 
-    - Setting
+    - Experiment
 toc: true
 ---
 

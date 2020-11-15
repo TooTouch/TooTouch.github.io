@@ -1,7 +1,7 @@
 ---
 title: 파이토치 모델 결과 재구성하기 (Pytorch Reproduction Experiement)
 categories: 
-    - Setting
+    - Experiment
 toc: true
 ---
 

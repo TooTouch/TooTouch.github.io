@@ -1,7 +1,7 @@
 ---
 title: "Python으로 Notion Table 불러오기"
 categories: 
-    - Setting
+    - Experiment
 toc: true
 ---
 

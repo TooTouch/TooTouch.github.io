@@ -20,7 +20,7 @@ links:
 ---
 
 # Contest Reviews
-- [2019 빅매칭캠프 후기](https://datanetworkanalysis.github.io/2019/12/12/bigmaching2019)
-- [2019 빅콘테스트 시상식 후기](https://datanetworkanalysis.github.io/2019/12/03/bigcontest2019_3)
-- [2019 빅콘테스트 챔피언리그 2차심사 후기](https://datanetworkanalysis.github.io/2019/11/03/bigcontest2019_2)
-- [2019 빅콘테스트 챔피언리그 참가 후기](https://datanetworkanalysis.github.io/2019/09/12/bigcontest2019)
+- [2019 빅매칭캠프 후기](https://tootouch.github.io/contest%20review/bigmatching2019/)
+- [2019 빅콘테스트 시상식 후기](https://tootouch.github.io/contest%20review/bigcontest2019_3/)
+- [2019 빅콘테스트 챔피언리그 2차심사 후기](https://tootouch.github.io/contest%20review/bigcontest2019_2/)
+- [2019 빅콘테스트 챔피언리그 참가 후기](https://tootouch.github.io/contest%20review/bigcontest2019/)
