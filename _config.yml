@@ -67,12 +67,12 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
-search_provider          : algolia
+search_provider          : 
 algolia:
-  application_id         : 3NN3SE81GT
-  index_name             : tootouch blog
-  search_only_api_key    : 94e9956bbf40453f59ccf18d4b323d15
-  powered_by             : true # true (default), false
+  application_id         : 
+  index_name             : 
+  search_only_api_key    : 
+  powered_by             : # true (default), false
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Jaehyuk Heo (TooTouch)"
   avatar           : "assets/images/front/profile.jpg"
-  bio              : "Data Scientist who want to be influencer"
+  bio              : "Data Scientist who want to be an influencer"
   location         : "Seoul"
   email            : "wogur379@gmail.com"
   links:
@@ -235,7 +235,7 @@ defaults:
       author_profile: true
   # _IML
   - scope:
-      path: ""
+      path: "_IML"
       type: IML
     values: 
       layout: single
@@ -247,7 +247,7 @@ defaults:
         nav: "IML"
   # _portfolio
   - scope:
-      path: ""
+      path: "_portfolio"
       type: portfolio
     values: 
       layout: single
