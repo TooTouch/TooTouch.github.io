@@ -188,7 +188,7 @@ toc: true
 시상이 끝나고 나서 기사가 언제 나올까 기다리면 두근두근하고 있었는데 기사[^4]도 나오고 생각지 못했던 뉴스까지 나왔다. 우아! 세상 사람들!! 나 티비 나왔어여! 
 
 <p align='center'>
-    <iframe src='https://tv.naver.com/embed/16777585?autoPlay=false' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+    <iframe width='400' src='https://tv.naver.com/embed/16777585?autoPlay=false' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
 </p>
 
 
