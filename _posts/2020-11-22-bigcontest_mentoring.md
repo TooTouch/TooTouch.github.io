@@ -73,9 +73,9 @@ toc: true
 
 사실 질문이 그렇게 많지는 않았다. 우리 사이에는 고민을 함께 공유하며 소통할 수 있는 공감대가 많이 없었기 때문에 오히려 질문하지 않는 부분 중에서 내가 더 얘기한 게 많았다. 당시 받았던 질문들에 대해 모두 적을 순 없지만 작년에 후기로 썼던 글이 답변을 대신 할 수 있을 것 같다.
 
-- [2019빅콘테스트 챔피언리그 참가 후기](https://tootouch.github.io/contest%20review/bigcontest2019/)
-- [2019빅콘테스트 챔피언리그 2차심사 후기](https://tootouch.github.io/contest%20review/bigcontest2019_2/)
-- [2019빅콘테스트 시상식 후기](https://tootouch.github.io/contest%20review/bigcontest2019_3/)
+- [2019 빅콘테스트 챔피언리그 참가 후기](https://tootouch.github.io/contest%20review/bigcontest2019/)
+- [2019 빅콘테스트 챔피언리그 2차심사 후기](https://tootouch.github.io/contest%20review/bigcontest2019_2/)
+- [2019 빅콘테스트 시상식 후기](https://tootouch.github.io/contest%20review/bigcontest2019_3/)
 - [2019 빅매칭캠프 후기](https://tootouch.github.io/contest%20review/bigmatching2019/)
 
 
