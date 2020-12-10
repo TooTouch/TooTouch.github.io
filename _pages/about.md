@@ -20,9 +20,13 @@ My research interests are **interpretable artificial intelligence** and **comput
 ---
 <h1 align='center'>Education</h1>
 
+**Korea University**
+
+- **MS**: school of Industrial Management Engineering, March 2021 ~
+
 **The University of Suwon**  
 
-- Bachelor of **Applied Statistics** (Advisor: Prof. [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
+- **BS**: School of **Applied Statistics** (Advisor: Prof. [Jinheum Kim](https://www.suwon.ac.kr/mainHp/prointro/detail.html?eno=1961566)), *March 2013 - August 2019*
 - Major GPA of **4.43 / 4.5**
 - Total GPA of **4.18 / 4.5 (95 / 100)**
 
