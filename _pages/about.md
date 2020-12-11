@@ -22,7 +22,7 @@ My research interests are **interpretable artificial intelligence** and **comput
 
 **Korea University**
 
-- **MS**: school of Industrial Management Engineering, March 2021 ~
+- **MS**: School of Industrial Management Engineering, March 2021 ~
 
 **The University of Suwon**  
 
