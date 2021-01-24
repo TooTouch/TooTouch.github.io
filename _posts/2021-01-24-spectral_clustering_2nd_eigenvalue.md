@@ -39,8 +39,7 @@ $$L = D - A \tag{4}$$
 Spectral clustering은 그림 2와 같이 $$L$$의 eigenvector를 기준으로 clustering 하기 때문에 모든 값이 상수인 첫 번째 eigenvalue의 eigenvector가 아닌, 결론적으로 **두 번째 eigenvalue의 eigenvector(이를 Fiedler vector라 부른다)부터 사용한다.** 
 
 <p align='center'>
-    <img src='https://user-images.githubusercontent.com/37654013/105630336-e62b6200-5e8b-11eb-99db-b2b124eaf171.png'>
+    <img src='https://user-images.githubusercontent.com/37654013/105630336-e62b6200-5e8b-11eb-99db-b2b124eaf171.png'><br>그림 2. spectral clustering 예시<br>출처 : cs224w 2019 Fall
 </p>
 
-그림 2. spectral clustering 예시
-출처 : cs224w 2019 Fall
+
