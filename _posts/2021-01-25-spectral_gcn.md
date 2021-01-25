@@ -7,7 +7,7 @@ toc: true
 
 **Graph Convolution Network**은 크게 spectral과 spatial 두 가지 관점으로 나뉜다. 여기서는 **spectral**에 대해서 정리한다. 
 
-*긴 글에 앞서 spectral GCN을 공부하는데 많은 조언을 해주신 같은 DSBA 연구실 윤훈상 선배님께 무한한 감사의 말을 전합니다.*
+*긴 글에 앞서 spectral GCN을 공부하는데 많은 조언을 해주신 같은 DSBA 연구실 [윤훈상 선배님](https://hoonst.github.io)께 무한한 감사의 말을 전합니다.*
 
 # Spectrum의 의미
 
