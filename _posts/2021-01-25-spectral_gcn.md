@@ -156,27 +156,131 @@ $$\textbf{x}*_{G}\textbf{g}_\theta = \textbf{U}\textbf{g}_\theta \textbf{U}^T\te
 
 기존 filter인 $$\textbf{g}_\theta$$는 단지 1 hop만 고려할 수 있다. 그래서 localized feature를 뽑기위해 $$\textbf{g}_\theta$$를 **식 (10)**과 같이 polynomial parameterization 해주었다. 여기서 localized라는 의미는 이웃 노드(1 hop), 이웃 노들의 이웃 노드(2 hops) 등등 k hops 만큼 이웃 노드의 정보를 고려하여 feature를 뽑겠다는 말이다.
 
-$$\textbf{g}_\theta(\Lambda) = \sum_{k=0}^{K} \theta_k \Lambda^k = \theta_0 \Lambda^0 + \theta_1 \Lambda^1 + \cdots + \theta_K \Lambda^K \tag{10}$$
+$$\textbf{g}_\theta(\Lambda) = \sum_{k=0}^{K} \theta_k \Lambda^k = \theta_0 \Lambda^0 + \theta_1 
+\Lambda^1 + \cdots + \theta_K \Lambda^K \tag{10}$$
+
+Polynomial parameterization을 적용한 filter를 **식 (9)**에 대입하면 **식 (11)**과 같이 정의할 수 있다.
+
+$$\begin{align*}
+\textbf{x}*_{G}\textbf{g}_\theta &= \textbf{U} \sum_{k=0}^{K}\theta_k\Lambda^k \textbf{U}^T\textbf{x} \\
+&= \textbf{U}(\theta_0 \Lambda^0 + \theta_1 \Lambda^1 + \cdots + \theta_K \Lambda^K)\textbf{U}^T\textbf{x} \\
+&= \sum_{k=0}^{K} \theta_k \textbf{L}^k \textbf{x}
+\tag{11}
+\end{align*}$$
+
+**Example**
+
+하지만 위의 식을 보아도 k에 따라 k-hop 만큼 이웃 노드를 반영 하겠다는 말이 직관적으로 다가오지 않을 수 있다. 때문에 간단한 예시를 통해 알아보자.
+
+<p align='center'>
+    <img width='300' src='https://user-images.githubusercontent.com/37654013/105801375-5a751b00-5fdc-11eb-8755-cb6487a42490.png'><br> 그림 4. 노드가 5개인 그래프 예시
+</p>
+
+**그림 (4)**와 같은 undirected graph $$(G)$$가 있다고 가정하자. 이때 $$\textbf{A}$$와 $$\textbf{D}$$는 다음과 같다. 
+
+$$\textbf{A} = 
+\begin{bmatrix}
+0 & 1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+1 & 1 & 0 & 1 & 0 
+\end{bmatrix}, 
+\textbf{D} = 
+\begin{bmatrix}
+2 & 0 & 0 & 0 & 0 \\
+0 & 3 & 0 & 0 & 0 \\
+0 & 0 & 2 & 0 & 0 \\
+0 & 0 & 0 & 2 & 0 \\ 
+0 & 0 & 0 & 0 & 3
+\end{bmatrix}$$
+
+이제 $$\textbf{L}$$의 $$k$$ 제곱이 실제로 이웃 노드의 정보를 반영하는지 알아보자. 여기서 $$\textbf{L}$$은 앞서 구한 $$\textbf{D} - \textbf{A}$$로 계산할 수 있고 $$k=2$$로 하여 예시를 만들어 보았다. 우선 $$\textbf{L}$$은 다음과 같다.
+
+$$\begin{align*}
+\textbf{L} &= \textbf{D} - \textbf{A} \\
+           &= \begin{bmatrix}
+               2 & -1 & 0 & 0 & -1 \\ 
+               -1 & 3 & -1 & 0 & -1 \\ 
+               0 & -1 & 2 & -1 & 0 \\ 
+               0 & 0 & -1 & 2 & -1 \\ 
+               -1 & -1 & 0 & -1 & 3 
+              \end{bmatrix}
+\end{align*}$$
+
+다음으로 $$\textbf{Lx}$$를 계산하면 각 노드와 해당 노드가 연결된 이웃 노드간의 차이를 계산하게 된다. 
+
+$$\begin{align*}
+\textbf{Lx} &= \begin{bmatrix}
+               2 & -1 & 0 & 0 & -1 \\ 
+               -1 & 3 & -1 & 0 & -1 \\ 
+               0 & -1 & 2 & -1 & 0 \\ 
+               0 & 0 & -1 & 2 & -1 \\ 
+               -1 & -1 & 0 & -1 & 3 
+              \end{bmatrix}
+              \begin{bmatrix}
+              x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
+              \end{bmatrix} \\
+            &= \begin{bmatrix}
+               \sum_{i \in [2,3]} (x_1 - x_i) \\
+               \sum_{i \in [1,3, 3]} (x_2 - x_i) \\
+               \sum_{i \in [2,4]} (x_3 - x_i) \\
+               \sum_{i \in [3,5]} (x_4 - x_i) \\
+               \sum_{i \in [1,2,4]} (x_5 - x_i) 
+               \end{bmatrix}
+\end{align*}$$
+
+이때 $$k=1$$인 $$\textbf{Lx}$$의 의미는 자신의 노드와 이웃 노드의 정보만 사용하겠다는 뜻이다. 이제 다음으로 $$k=2$$일 때 $$\textbf{L}(\textbf{Lx})$$를 계산해보자.
+
+$$\begin{align*}
+\textbf{L}(\textbf{Lx}) &= \begin{bmatrix}
+                            2 & -1 & 0 & 0 & -1 \\ 
+                            -1 & 3 & -1 & 0 & -1 \\ 
+                            0 & -1 & 2 & -1 & 0 \\ 
+                            0 & 0 & -1 & 2 & -1 \\ 
+                            -1 & -1 & 0 & -1 & 3 
+                            \end{bmatrix}
+                            \begin{bmatrix}
+                            \sum_{i \in [2,3]} (x_1 - x_i) \\
+                            \sum_{i \in [1,3,5]} (x_2 - x_i) \\
+                            \sum_{i \in [2,4]} (x_3 - x_i) \\
+                            \sum_{i \in [3,5]} (x_4 - x_i) \\
+                            \sum_{i \in [1,2,4]} (x_5 - x_i) 
+                            \end{bmatrix} \\
+                        &= \begin{bmatrix}
+                            2\sum_{i \in [2,3]} (x_1 - x_i) - \sum_{i \in [1,3,5]} (x_2 - x_i) - \sum_{i \in [1,2,4]} (x_5 - x_i) \\
+                            -\sum_{i \in [2,3]} (x_1 - x_i) + 3\sum_{i \in [1,3,5]} (x_2 - x_i) - \sum_{i \in [2,4]} (x_3 - x_i) - \sum_{i \in [1,2,4]} (x_5 - x_i) \\
+                            -\sum_{i \in [1,3,5]} (x_2 - x_i) + 2\sum_{i \in [2,4]} (x_3 - x_i) - \sum_{i \in [3,5]} (x_4 - x_i) \\
+                            -\sum_{i \in [2,4]} (x_3 - x_i) + 2\sum_{i \in [3,5]} (x_4 - x_i) - \sum_{i \in [1,2,4]} (x_5 - x_i) \\
+                            -\sum_{i \in [2,3]} (x_1 - x_i) - \sum_{i \in [1,3,5]} (x_2 - x_i) - \sum_{i \in [3,5]} (x_4 - x_i) + 3\sum_{i \in [1,2,4]} (x_5 - x_i)
+                           \end{bmatrix}
+\end{align*}$$
+
+수식이 조금 지저분해 보이기 때문에 node 1의 정보만 가지고 알아보자. $$\textbf{L}(\textbf{Lx})$$을 통해 나온 node 1의 정보는 다음과 같은 의미를 포함하고 있다. 
+
+$$\textbf{L}(\textbf{Lx})(1) = 2\sum_{i \in [2,3]} (x_1 - x_i) - \sum_{i \in [1,3,5]} (x_2 - x_i) - \sum_{i \in [1,2,4]} (x_5 - x_i)$$  
+
+우선 첫 번째로 우변의 $$2\sum_{i \in [2,3]} (x_1 - x_i)$$은 node 1과 다른 이웃 간의 정보를 나타낸다. 다음으로 $$\sum_{i \in [1,3,5]} (x_2 - x_i)$$와 $$\sum_{i \in [1,2,4]} (x_5 - x_i)$$은 node 2와 5의 이웃 간의 정보를 나타낸다. 즉, node 2와 5의 이웃 간의 정보는 node 1의 이웃의 이웃 정보 (2-hop)을 나타내기 때문에 결론적으로 $$\textbf{L}^k\textbf{x}$$는 k-hop의 이웃 정보를 포함한다고 볼 수 있다. 
 
 ## ChebNet
 
-**식 (10)**은 localized feature를 추출할 수 있지만 computation complexity가 높다는 단점이 있다. 이러한 이유로 ChebNet에서는 Chebyshev polynomial of the first kind를 통해 근사하여 문제를 해결하였다. 
+**식 (11)**은 localized feature를 추출할 수 있지만 computation complexity가 높다는 단점이 있다. 이러한 이유로 ChebNet에서는 Chebyshev polynomial of the first kind를 통해 근사하여 문제를 해결하였다. 
 
-Chebyshev polynomial of the first kind는 convolution filter를 **식 (11)**과 같이 정의 할 수 있다
+Chebyshev polynomial of the first kind는 convolution filter를 **식 (12)**와 같이 정의 할 수 있다
 
-$$\textbf{g}_\theta=\sum_{i=0}^{K}\theta_iT_{i}(\tilde{\Lambda}), \ \ \tilde{\Lambda}=\frac{2\Lambda}{\lambda_{max}}-I_n \ \ (-1 < \tilde{\Lambda} <1 ) \tag{11}$$
+$$\textbf{g}_\theta=\sum_{i=0}^{K}\theta_iT_{i}(\tilde{\Lambda}), \ \ \tilde{\Lambda}=\frac{2\Lambda}{\lambda_{max}}-I_n \ \ (-1 < \tilde{\Lambda} <1 ) \tag{12}$$
 
-여기서 $$\tilde{\Lambda}$$는 $$\Lambda$$를 [-1,1] 범위로 스케일링 한 값이다. $$T(\cdot)$$은 Chebyshev polynomial function이다. Chebyshev polynomial of first kind에서 다항식은 다음 **식 (12)**를 따른다.
+여기서 $$\tilde{\Lambda}$$는 $$\Lambda$$를 [-1,1] 범위로 스케일링 한 값이다. $$T(\cdot)$$은 Chebyshev polynomial function이다. Chebyshev polynomial of first kind에서 다항식은 다음 **식 (13)**을 따른다.
 
-$$T_{n+1}(x) = 2xT_n(x) -T_{n-1}(x) \tag{12}$$
+$$T_{n+1}(x) = 2xT_n(x) -T_{n-1}(x) \tag{13}$$
 
-여기서 $$T_0(x) =1$$ 이고 $$T_1(x)=x$$이다.  **식 (12)**를 **식 (11)**에 적용하면 **식 (13)**과 같이 정의할 수 있다.
+여기서 $$T_0(x) =1$$ 이고 $$T_1(x)=x$$이다.  **식 (12)**를 **식 (9)**에 적용하면 **식 (14)**와 같이 정의할 수 있다.
 
-$$\textbf{x}*_{G}\textbf{g}_\theta = \textbf{U}(\sum_{i=0}^{K}\theta_iT_{i}(\tilde{\Lambda}))\textbf{U}^T\textbf{x} \tag{13}$$
+$$\textbf{x}*_{G}\textbf{g}_\theta = \textbf{U}(\sum_{i=0}^{K}\theta_iT_{i}(\tilde{\Lambda}))\textbf{U}^T\textbf{x} \tag{14}$$
 
-이때 $$\mathcal{L}$$는 $$\frac{2\textbf{L}}{\lambda_{max}} - I_n$$으로 나타낼 수 있다. **식 (1)**과 같이 $$T_i(\mathcal{L})$$ 또한 $$\textbf{U} T_i(\tilde{\Lambda}) \textbf{U}^T$$ 로 표현할 수 있다. 즉, **식 (13)**을 다음과 같이 **식 (14)**로 표현 할 수 있다.
+이때 $$\mathcal{L}$$는 $$\frac{2\textbf{L}}{\lambda_{max}} - I_n$$으로 나타낼 수 있다. **식 (1)**과 같이 $$T_i(\mathcal{L})$$ 또한 $$\textbf{U} T_i(\tilde{\Lambda}) \textbf{U}^T$$ 로 표현할 수 있다. 즉, **식 (14)**를 다음과 같이 **식 (15)**로 표현 할 수 있다.
 
-$$\textbf{x}*_{G}\textbf{g}_\theta = \sum_{i=0}^{K}\theta_iT_{i}(\mathcal{L})\textbf{x} \tag{14}$$
+$$\textbf{x}*_{G}\textbf{g}_\theta = \sum_{i=0}^{K}\theta_iT_{i}(\mathcal{L})\textbf{x} \tag{15}$$
 
 ## GCN
 
@@ -190,29 +294,29 @@ $$\textbf{x}*_{G}\textbf{g}_\theta = \sum_{i=0}^{K}\theta_iT_{i}(\mathcal{L})\te
 
 GCN에서는 먼저 ChebNet에서 사용하는 필터를 $$K=1$$ 로 정하고 activation function을 통해 non-linearity를 추가해 layer를 깊게 쌓는 방식으로 만들었다. 또한, $$\lambda_{max} = 2$$ 로 가정했다. 
 
-앞선 가정에 따라 **식 (14)**는 **식 (15)**로 바뀌게 된다. 
+앞선 가정에 따라 **식 (15)**는 **식 (16)**으로 바뀌게 된다. 
 
-$$\textbf{x} *_{G}\textbf{g}_\theta = \theta_0 \textbf{x} - \theta_1 (\textbf{L} - \textbf{I}_n) \textbf{x} \tag{15} $$
+$$\textbf{x} *_{G}\textbf{g}_\theta = \theta_0 \textbf{x} - \theta_1 (\textbf{L} - \textbf{I}_n) \textbf{x} \tag{16} $$
 
-그 다음 $$\textbf{L} - \textbf{I}_n = \textbf{A}$$ 를 normalize하여 $$\textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$로 변환하여 다음과 같이 **식 (16)**으로 나타냈다. 
+그 다음 $$\textbf{L} - \textbf{I}_n = \textbf{A}$$ 를 normalize하여 $$\textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$로 변환하여 다음과 같이 **식 (17)**로 나타냈다. 
 
-$$\textbf{x} *_{G}\textbf{g}_\theta = \theta_0 \textbf{x} - \theta_1 \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2} \textbf{x} \tag{16} $$
+$$\textbf{x} *_{G}\textbf{g}_\theta = \theta_0 \textbf{x} - \theta_1 \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2} \textbf{x} \tag{17} $$
 
 **Step 2**
 
-다음으로는 $$\theta = \theta_0 = -\theta_1$$ 와 같이 parameter를 줄여서 overfitting을 방지하고 **식 (17)**과 같이 간략하게 만들었다.
+다음으로는 $$\theta = \theta_0 = -\theta_1$$ 와 같이 parameter를 줄여서 overfitting을 방지하고 **식 (18)**과 같이 간략하게 만들었다.
 
-$$\textbf{x} *_{G}\textbf{g}_\theta = \theta (\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2} ) \textbf{x} \tag{17}$$
+$$\textbf{x} *_{G}\textbf{g}_\theta = \theta (\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2} ) \textbf{x} \tag{18}$$
 
 **Step 3**
 
-**식 (17)**에서 $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$의 eigenvalue는 [0,2]의 범위를 가진다(Appendix 1). 이 단계에서는 **renormalization trick**을 적용하여 eigenvalue의 최대값의 크기를 줄여주었다. $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$을 $$\tilde{\textbf{D}}^{-1/2} \mathscr{A} \tilde{\textbf{D}}^{-1/2}$$로 변환하였고 이때 $$\mathscr{A} = \textbf{A} + \textbf{I}_n$$ 이고 $$\tilde{\textbf{D}}_{ii} = \sum_{j} \mathscr{A}_{ij}$$ 이다. 이는 self-loop를 추가함으로써 oversmoothing을 방지하고 eigenvalue의 범위를 줄임으로써 연산 과정에서 stability를 높이기 위함이다(Appendix 2).
+**식 (18)**에서 $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$의 eigenvalue는 [0,2]의 범위를 가진다(Appendix 1). 이 단계에서는 **renormalization trick**을 적용하여 eigenvalue의 최대값의 크기를 줄여주었다. $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$을 $$\tilde{\textbf{D}}^{-1/2} \mathscr{A} \tilde{\textbf{D}}^{-1/2}$$로 변환하였고 이때 $$\mathscr{A} = \textbf{A} + \textbf{I}_n$$ 이고 $$\tilde{\textbf{D}}_{ii} = \sum_{j} \mathscr{A}_{ij}$$ 이다. 이는 self-loop를 추가함으로써 oversmoothing을 방지하고 eigenvalue의 범위를 줄임으로써 연산 과정에서 stability를 높이기 위함이다(Appendix 2).
 
-$$\textbf{x} *_{G}\textbf{g}_\theta = \theta \tilde{\textbf{D}}^{-1/2} \mathscr{A} \tilde{\textbf{D}}^{-1/2} \textbf{x} \tag{18}$$
+$$\textbf{x} *_{G}\textbf{g}_\theta = \theta \tilde{\textbf{D}}^{-1/2} \mathscr{A} \tilde{\textbf{D}}^{-1/2} \textbf{x} \tag{19}$$
 
-이제 **식 (18)**을 **식 (19)**와 같이 일반화 하여 사용할 수 있다.
+이제 **식 (19)**를 **식 (20)**과 같이 일반화 하여 사용할 수 있다.
 
-$$\textbf{H}^{k} = \sigma(\hat{\textbf{A}}\textbf{H}^{k-1}\Theta^{k}) \tag{19}$$
+$$\textbf{H}^{k} = \sigma(\hat{\textbf{A}}\textbf{H}^{k-1}\Theta^{k}) \tag{20}$$
 
 여기서 $$\hat{\textbf{A}} = \tilde{\textbf{D}}^{-1/2} \mathscr{A} \tilde{\textbf{D}}^{-1/2}$$, $$\hat{\textbf{A}} \in \mathbb{R}^{n \times n}$$ 이고 $$\textbf{H}^0 = \textbf{X}$$, $$\textbf{X} \in \mathbb{R}^{n \times C}$$ 이다. $$C$$ 는 input channel 수(= 여기선 각 노드의 $$C$$ 차원의 feature vector)를 말한다.  $$\textbf{H}^{k} \in \mathbb{R}^{n \times F}$$는 $$k$$ 번째 layer의 output이고 $$F$$는 output의 channel 수 이다. $$\Theta^{k} \in \mathbb{R}^{C \times F}$$ 는 $$k$$ 번째 layer의 가중치 행렬이다. 마지막으로 $$\sigma$$는 activation function을 말한다. 
 
@@ -377,15 +481,15 @@ $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$를 $$\textbf{S
 
 $$\textbf{S}_{1-order} = 2\textbf{I} - \mathscr{L}$$
 
-이때 $$\textbf{S}^{K}_{1-order}$$은 filter coefficient가 $$(2-\lambda_i)^K$$인 값을 가진다. 여기서 $$\lambda_i$$는 $$\mathscr{L}$$의 eigenvalue이다. **그림 (4)**를 보면 $$\lambda_i < 1$$ 에서 K가 커짐에 따라 filter coefficient의 값이 급격히 커짐을 알 수 있다[^2]. 
+이때 $$\textbf{S}^{K}_{1-order}$$은 filter coefficient가 $$(2-\lambda_i)^K$$인 값을 가진다. 여기서 $$\lambda_i$$는 $$\mathscr{L}$$의 eigenvalue이다. **그림 (5)**를 보면 $$\lambda_i < 1$$ 에서 K가 커짐에 따라 filter coefficient의 값이 급격히 커짐을 알 수 있다[^2]. 
 
 <p align='center'>
-    <img src='https://user-images.githubusercontent.com/37654013/105690922-ec7b1600-5f3f-11eb-8e5f-40421b01d59d.png'><br>그림 4. Simplifying GCN에서 실험한 augmented normalized adjacency의 효과
+    <img src='https://user-images.githubusercontent.com/37654013/105690922-ec7b1600-5f3f-11eb-8e5f-40421b01d59d.png'><br>그림 5. Simplifying GCN에서 실험한 augmented normalized adjacency의 효과
 </p>
 
 이러한 것을 방지하기 위해 eigenvalue의 크기를 줄이려고 사용한 방법이 바로 renormalization trick이다. Renormalization trick을 적용한 결과값은 $$\tilde{\textbf{S}}_{adj} = \tilde{\textbf{D}}^{-1/2}\tilde{\textbf{A}}\tilde{\textbf{D}}^{-1/2}$$ 으로 나타낸다. 여기서 $$\tilde{\textbf{A}} = \textbf{A} + \textbf{I}$$ 이고 $$\tilde{\textbf{D}} = \textbf{D} + \textbf{I}$$ 이다. 이를 통해 $$\tilde{\textbf{L}} = \textbf{I} - \tilde{\textbf{D}}^{-1/2}\tilde{\textbf{A}}\tilde{\textbf{D}}^{-1/2}$$ 으로 나타낼 수 있다. 결과적으로 renormalization trick을 적용한 filter의 coefficient는 $$\hat{g}(\tilde{\lambda_i}) = (1 - \tilde{\lambda_i})^K$$ 이고 여기서 $$\tilde{\lambda_i}$$는 $$\tilde{\textbf{L}}$$의 eigenvalue 이다.
 
-**그림 (4)**에서 가운데는 self-loop를 추가하지 않은 $$\textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$의 filter coefficient를 조사한 결과이고 오른쪽은 self-loop를 추가한 $$\tilde{\textbf{D}}^{-1/2}\tilde{\textbf{A}}\tilde{\textbf{D}}^{-1/2}$$의 filter coefficient를 나타낸 결과이다. 
+**그림 (5)**에서 가운데는 self-loop를 추가하지 않은 $$\textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$의 filter coefficient를 조사한 결과이고 오른쪽은 self-loop를 추가한 $$\tilde{\textbf{D}}^{-1/2}\tilde{\textbf{A}}\tilde{\textbf{D}}^{-1/2}$$의 filter coefficient를 나타낸 결과이다. 
 
 Self-loop를 추가하게 되면 최대 eigenvalue 값이 줄어들게 되는데 이는 다음과 같은 이유이다. 
 
