@@ -391,7 +391,7 @@ Self-loop를 추가하게 되면 최대 eigenvalue 값이 줄어들게 되는데
 
 **[Theorem 1]**
 
-$$\textbf{A}$$가 undirected graph $$G$$에 대한 adjacency matrix이고 이에 대한 degree matrix는 $$\textbf{D}$$라고 하자. 이 때 augmented adjacency matrix를 $$\tilde{\textbf{A}} = \textbf{A} + \gamma\textbf{I}$$, $$\gamma > 0$$ 로 나타내고 이에 대한 degree matrix는 $$\tilde{\textbf{D}}$$이다. 또한, $$\mathscr{L} = \textbf{I} - \textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$의 가장 작은 eigenvalue와 가장 큰 eigenvalue를 각각 $$\lambda_1$$ 그리고 $$\lambda_n$$로 나타낸다. 이와 같이 $$\tilde{\textbf{L}} = \textbf{I} - \textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$의 가장 작은 eigenvalue와 가장 큰 eigenvalue를 각각 $$\tilde{\lambda_1}$$ 그리고 $$\tilde{\lambda_n}$$로 나타낸다. 이제 다음과 같은 식이 성립한다. 
+$$\textbf{A}$$가 undirected graph $$G$$에 대한 adjacency matrix이고 이에 대한 degree matrix는 $$\textbf{D}$$라고 하자. 이 때 augmented adjacency matrix를 $$\tilde{\textbf{A}} = \textbf{A} + \gamma\textbf{I}$$, $$\gamma > 0$$ 로 나타내고 이에 대한 degree matrix는 $$\tilde{\textbf{D}}$$이다. 또한, $$\mathscr{L} = \textbf{I} - \textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$의 가장 작은 eigenvalue와 가장 큰 eigenvalue를 각각 $$\lambda_1$$ 그리고 $$\lambda_n$$로 나타낸다. 이와 같이 $$\tilde{\textbf{L}} = \textbf{I} - \tilde{\textbf{D}}^{-1/2}\textbf{A}\tilde{\textbf{D}}^{-1/2}$$의 가장 작은 eigenvalue와 가장 큰 eigenvalue를 각각 $$\tilde{\lambda_1}$$ 그리고 $$\tilde{\lambda_n}$$로 나타낸다. 이제 다음과 같은 식이 성립한다. 
 
 $$0=\lambda_1=\tilde{\lambda_1} < \tilde{\lambda_n} < \lambda_n$$
 
