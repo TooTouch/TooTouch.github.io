@@ -43,7 +43,7 @@ Survey paper에서는 GNN을 다음과 같이 크게 4가지 맥락으로 나누
 Survey paper에서 소개하는 논문은 학습 방법만 따지면 대략 48개의 paper를 소개한다. 물론 각 방법마다 자세하게 설명하는 것은 아니라 핵심 내용만 소개하거나 이전 방법에서 개선된 점만 소개한다. **그림 (3)**은 survey paper에서 분류한 GNN 학습 방법을 연도별 그리고 방법별로 나타낸 그림이다. 
 
 <p align='center'>
-    <img src='https://user-images.githubusercontent.com/37654013/106141179-19832f00-61b3-11eb-9241-dcb969ce3491.png'><br>그림 3. Survey paper에서 소개하는 방법들에 대한 연도와 분류별 Roadmap
+    <img src='https://user-images.githubusercontent.com/37654013/106168836-12b7e480-61d2-11eb-8997-178df3effcac.png'><br>그림 3. Survey paper에서 소개하는 방법들에 대한 연도와 분류별 Roadmap
 </p>
 
 
@@ -199,7 +199,7 @@ DGCN은 이러한 dual graph convolutional layers를 통해서 결과를 ensembl
 ## Spatial models
 
 <p align='center'>
-    <img width='400' src='https://user-images.githubusercontent.com/37654013/106140853-a8dc1280-61b2-11eb-9b17-e9c8b817357d.png'><br>그림 7. Spatial 기반 GCNs Roadmap
+    <img width='400' src='https://user-images.githubusercontent.com/37654013/106168751-fd42ba80-61d1-11eb-8708-f708efe5a96f.png'><br>그림 7. Spatial 기반 GCNs Roadmap
 </p> 
 
 이미지에서 사용하는 convolution과 유사하게 spatial 기반의 방법들은 노드들의 spatial 관계를 활용하여 학습하는 방법이다. Spetial 관계 라는건 중심 노드와 주변 노드의 관계를 말한다. Spatial 모델의 학습 과정은 convolution 과정을 통해서 중심 노드와 주변 노드의 representation을 학습하여 중심 노드의 representation을 업데이트 하는 방식을 말한다. 또다른 관점으로는 spatial 기반 GCN 모델은 앞서 설명한 RecGNNs의 information propagation 또는 message passing과 같은 개념으로 볼 수 있다. 즉, Spatial 모델 또한 edge를 통해 각 노드의 information을 전달하는 방식이다. 
@@ -294,9 +294,9 @@ $$\textbf{h}_v^{(k)} = MLP((1+\epsilon^{(k)})\textbf{h}_v^{(k-1)} + \sum_{u \in 
 
 - **[Author github (Pytorch)](https://github.com/weihua916/powerful-gnns)** 
 
-**9. GraphSage (2017)[^23]**
+**9. GraphSAGE (2017)[^23]**
 
-GraphSage는 각 노드마다 이웃 노드의 수가 다양하게 존재하는데 모든 이웃 노드를 고려하는 것은 비효율적이기 때문에 일정한 이웃 노드 수를 고정하여 학습하는 방법이다. GraphSage의 graph convolution은 **식 (19)**를 통해 정의할 수 있다. 
+GraphSAGE는 각 노드마다 이웃 노드의 수가 다양하게 존재하는데 모든 이웃 노드를 고려하는 것은 비효율적이기 때문에 일정한 이웃 노드 수를 고정하여 학습하는 방법이다. GraphSAGE의 graph convolution은 **식 (19)**를 통해 정의할 수 있다. 
 
 $$\textbf{h}_v^{(k)} = \sigma(\textbf{W}^{(k)} \cdot f_k(\textbf{h}_v^{(k-1)}, \{ \textbf{h}_u^{(k-1)}, \forall u \in S_{N(v)} \})) \tag{19}$$
 
@@ -306,7 +306,7 @@ $$\textbf{h}_v^{(k)} = \sigma(\textbf{W}^{(k)} \cdot f_k(\textbf{h}_v^{(k-1)}, \
 
 **10. Graph Attention Network, GAT (2017)[^24]**
 
-GAT는 중심 노드에 대한 이웃 노드의 기여도를 계산하는 방법이 이웃 노드의 샘플을 정하는 GraphSage[^23]나 GCN[^11]과 같이 미리 고정된(pre-determined) 이웃 노드의 기여도와는 다르다. GAT는 일반적으로 사용되는 attention mechanisms을 사용한다. 단, graph에서는 연결된 두 노드의 상대적인 가중치를 학습하는 방식을 사용한다. GAT는 **식 (20)**과 같이 정의할 수 있다.
+GAT는 중심 노드에 대한 이웃 노드의 기여도를 계산하는 방법이 이웃 노드의 샘플을 정하는 GraphSAGE[^23]나 GCN[^11]과 같이 미리 고정된(pre-determined) 이웃 노드의 기여도와는 다르다. GAT는 일반적으로 사용되는 attention mechanisms을 사용한다. 단, graph에서는 연결된 두 노드의 상대적인 가중치를 학습하는 방식을 사용한다. GAT는 **식 (20)**과 같이 정의할 수 있다.
 
 $$\textbf{h}_v^{(k)} = \sigma(\sum_{u \in N(v) \cup v} \alpha_{vu}^{(k)} \textbf{W}^{(k)} \textbf{h}_u^{(k-1)}) \tag{20}$$
 
@@ -314,7 +314,7 @@ $$\textbf{h}_v^{(k)} = \sigma(\sum_{u \in N(v) \cup v} \alpha_{vu}^{(k)} \textbf
 
 $$\alpha_{vu}^{(k)} = softmax(g(\textbf{a}^T[\textbf{W}^{(k)}\textbf{h}_v^{(k-1)} \| \textbf{W}^{(k)}\textbf{h}_u^{(k-1)})) \tag{21}$$
 
-여기서 $$g(\cdot)$$은 LeakyReLU activation function 이고 $$\textbf{a}$$는 학습 parameter이다. Softmax function은 노드 $$v$$의 모든 이웃의 attention weigth 합이 1이 되게하기 위해 사용하였다. GAT는 또한 multi-head attention을 사용하여 모델 성능을 더욱 향상 시킬 수 있고 실제로도 GraphSage 보다 node classification 문제에서 더 좋은 성능을 나타내었다. 
+여기서 $$g(\cdot)$$은 LeakyReLU activation function 이고 $$\textbf{a}$$는 학습 parameter이다. Softmax function은 노드 $$v$$의 모든 이웃의 attention weigth 합이 1이 되게하기 위해 사용하였다. GAT는 또한 multi-head attention을 사용하여 모델 성능을 더욱 향상 시킬 수 있고 실제로도 GraphSAGE 보다 node classification 문제에서 더 좋은 성능을 나타내었다. 
 
 - **[Author github (Tensorflow)](https://github.com/PetarV-/GAT)** 
 - **[Unofficial Pytorch](https://github.com/Diego999/pyGAT)**
@@ -420,9 +420,9 @@ Mean vector $$\mu_i$$는 **식 (24)**에서 정의한 encoder output의 $$i^{th}
 
 - **[Author github (Tensorflow)](https://github.com/tkipf/gae)** 
 
-**5. GraphSage (2017)[^23]**
+**5. GraphSAGE (2017)[^23]**
 
-GraphSage는 spatial 기반 모델에서 설명했지만 network embedding에도 사용된다. GraphSage에서는 reconstruction error를 최적화 하는 것이 아닌, negative sampling을 통해 두 노드 간의 relational information을 최적화 한다. GraphSage의 embedding loss term은 **식 (27)**과 같이 나타낼 수 있다.
+GraphSAGE는 spatial 기반 모델에서 설명했지만 network embedding에도 사용된다. GraphSAGE에서는 reconstruction error를 최적화 하는 것이 아닌, negative sampling을 통해 두 노드 간의 relational information을 최적화 한다. GraphSAGE의 embedding loss term은 **식 (27)**과 같이 나타낼 수 있다.
 
 $$L(\textbf{z}_v) = -\log(\sigma(\textbf{z}_v^T \textbf{z}_u)) - QE_{v_n ~ P_n{(v)}}\log(\sigma(-\textbf{z}_v^T\textbf{z}_{v_n})) \tag{27}$$
 
