@@ -11,7 +11,7 @@ toc: true
 
 # Introduction
 
-내가 본 survey paper는 "[A comprehensive survey on graph neural networks.](https://arxiv.org/pdf/1901.00596.pdf)" 이다. 작년 3월에 IEEE transactions on neural networks and learning systems에 출판되었고 현재는 벌써 인용 수가 1000회를 넘었다. 이 survey paper에서는 왜 graph neural network (GNN)에 관련된 내용이고 그래프는 다른 데이터와 어떤점이 다른지 그리고 적용된 neural network를 크게 4가지로 나누어 설명한다[^1]. 그 안에서도 맥락이 또 나뉘는데 아래에서 분류별로 정리하려 한다. 실제 논문에서는 다양항 학습 과정에서의 관점과 여러 활용 사례들이 있지만 여기서는 학습 방법을 위주로 정리한다. 사실 이미 정리된 걸 또 정리하는 것이기 때문에 단순히 한국어로만 변역에서 쓰는 것이 아닌가 싶은 생각도 있지만 추가적으로 내가 정리하는 내용은 다음과 같다.
+내가 본 survey paper는 "[A comprehensive survey on graph neural networks.](https://arxiv.org/pdf/1901.00596.pdf)" 이다. 작년 3월에 IEEE transactions on neural networks and learning systems에 출판되었고 현재는 벌써 인용 수가 1000회를 넘었다. 이 survey paper에서는 왜 graph neural network (GNN)에 관련된 내용이고 그래프는 다른 데이터와 어떤점이 다른지 그리고 적용된 neural network를 크게 4가지로 나누어 설명한다[^1]. 그 안에서도 맥락이 또 나뉘는데 아래에서 분류별로 정리하려 한다. 실제 논문에서는 다양항 학습 과정에서의 관점과 여러 활용 사례들이 있지만 여기서는 학습 방법을 위주로 정리한다. 사실 이미 정리된 걸 또 정리하는 것이기 때문에 단순히 한국어로만 변역해서 쓰는 것이 아닌가 싶은 생각도 있지만 추가적으로 내가 정리하는 내용은 다음과 같다.
 
 - Spectral GCN에 대한 중간에 생략된 설명들
 - Survey paper를 통해 소개된 여러 방법들의 연도별 Roadmap
@@ -19,7 +19,7 @@ toc: true
 
 ## Background
 
-기존 머신러닝은 *euclidean* data에서는 굉장히 잘 적용된다. 하지만 *non-euclidean* data에는 이와 반대로 적용하기 어려운데 그 이유는 선형회귀와 같은 머신러닝 모델들이 대부분 가정하는 것이 feature가 서로 독립이어야 한다는 것이다. 여기서 *non-euclidean* data란 **그림 (1)**과 같이 graph 또는 tree 구조를 가진 데이터를 말한다. Graph는 연결된 edge들이 방향성(*directed*)이 있거나 없거나(*undirected*) 순환(*cyclic*)되는 구조가 있다. 한편 tree는 방향성(directed)이 있는, 즉 유향 비순환(*acyclic*) 그래프의 한 종류로 생각하면 된다. 단, 또한, tree는 root node가 하나로 고정되어 있다. 이러한 *non-euclidean* data는 각 feature 간의 관계(*relation*)가 있기 때문에 기존 머신러닝 방법으로는 접근이 어렵다. 따라서 이 문제를 해결하기 위해 다양한 neural network가 제안되었다. 
+기존 머신러닝은 *euclidean* data에서는 굉장히 잘 적용된다. 하지만 *non-euclidean* data에는 이와 반대로 적용하기 어려운데 그 이유는 선형회귀와 같은 머신러닝 모델들이 대부분 가정하는 것이 feature가 서로 독립이어야 한다는 것이다. 여기서 *non-euclidean* data란 **그림 (1)**과 같이 graph 또는 tree 구조를 가진 데이터를 말한다. Graph는 연결된 edge들이 방향성(*directed*)이 있거나 없거나(*undirected*) 순환(*cyclic*)되는 구조가 있다. 한편 tree는 방향성(directed)이 있는, 즉 유향 비순환(*acyclic*) 그래프의 한 종류로 생각하면 된다. 단, tree는 root node가 하나로 고정되어 있다. 이러한 *non-euclidean* data는 각 feature 간의 관계(*relation*)가 있기 때문에 기존 머신러닝 방법으로는 접근이 어렵다. 따라서 이 문제를 해결하기 위해 다양한 neural network가 제안되었다. 
 
 <p align='center'>
     <img width='500' src='https://user-images.githubusercontent.com/37654013/104730902-387acd80-577e-11eb-91e8-f153cfa7b5a6.png'><br>그림 1. Tree와 Graph 구조 예시
@@ -40,7 +40,7 @@ Survey paper에서는 GNN을 다음과 같이 크게 4가지 맥락으로 나누
 
 ## Roadmap
 
-Survey paper에서 소개하는 논문은 학습 방법만 따지면 대략 48개의 paper를 소개한다. 물론 각 방법마다 자세하게 설명하는 것은 아니라 핵심 내용만 소개하거나 이전 방법에서 개선된 점만 소개한다. **그림 (3)**은 방법별로 survey paper에서 분류한 GNN 학습 방법을 연도별 그리고 방법별로 나타낸 그림이다. 
+Survey paper에서 소개하는 논문은 학습 방법만 따지면 대략 48개의 paper를 소개한다. 물론 각 방법마다 자세하게 설명하는 것은 아니라 핵심 내용만 소개하거나 이전 방법에서 개선된 점만 소개한다. **그림 (3)**은 survey paper에서 분류한 GNN 학습 방법을 연도별 그리고 방법별로 나타낸 그림이다. 
 
 <p align='center'>
     <img src='https://user-images.githubusercontent.com/37654013/106141179-19832f00-61b3-11eb-9241-dcb969ce3491.png'><br>그림 3. Survey paper에서 소개하는 방법들에 대한 연도와 분류별 Roadmap
@@ -77,18 +77,18 @@ Survey paper에서 소개하는 논문은 학습 방법만 따지면 대략 48�
 
 **1. Learning representations by back-propagating errors (1997)[^2]**
 
-neural network static infromation or temporal sequence structure data 에는 잘 되지만 graph 같은 structure data에는 잘 안된다. 그 이유는 graph의 경우 structure 사이즈가 다양하기 때문에 그래서 이러한 사이즈의 변화에도 사용할 수 있는 방법인 `generalized recursive network`를 제안했다. 하지만 computational limitation이 존재한다. 또한, directed graph에만 적용 가능하다는 단점이 있다.
+neural network static infromation or temporal sequence structure data 에는 잘 되지만 graph 같은 structure data에는 잘 안된다. 그 이유는 graph의 경우 structure 사이즈가 다양하기 때문이다. 그래서 이러한 사이즈의 변화에도 사용할 수 있는 방법인 `generalized recursive network`를 제안했다. 하지만 computational limitation이 존재한다. 또한, directed graph에만 적용 가능하다는 단점이 있다.
 
 **2.1 A new model for learning in graph domains (2005)[^3]**
 **2.2 The graph neural network model, GNN (2008)[^4]**
 
-이후 GNN 이라는 단어를 처음 사용한 논문 공개 되었다. 97년도에 발표된 `generalized recursive network`와는 달리 directed, undirected, cycle이 있는 그래프 모두 적용 가능하다. 또한, 앞선 문제였던 computational complexity를 $$O(m)$$으로 줄였다. 여기서 m은 edge 수를 말한다. 즉, edge가 늘어남에 따라 complexity 또한 선형적으로 증가함을 말한다. 이유는 잘 모르겠지만 2005년에 처음 GNN을 소개했는데 앞선 논문[^3]에 더해서 time complextity를 줄이는 내용을 더 디테일하게 소개하며 2008년에 두 명의 저자가 추가되어 또 발표했다. 
+이후 GNN 이라는 단어를 처음 사용한 논문이 공개 되었다. 97년도에 발표된 `generalized recursive network`와는 달리 directed, undirected, cycle이 있는 그래프 모두 적용 가능하다. 또한, 앞선 문제였던 computational complexity를 $$O(m)$$으로 줄였다. 여기서 $$m$$은 edge 수를 말한다. 즉, edge가 늘어남에 따라 complexity 또한 선형적으로 증가함을 말한다. 이유는 잘 모르겠지만 2005년에 처음 GNN을 소개했는데 앞선 논문[^3]에 더해서 time complextity를 줄이는 내용을 더 디테일하게 소개하며 2008년에 두 명의 저자가 추가되어 또 발표했다. 
 
-학습 방법은 이웃 노드들의 information을 recurrent하게 전달하여 node state를 업데이트 한다. 이 과정을 node state가  수렴할 때까지 iteration을 반복해야 한다.
+학습 방법은 이웃 노드들의 information을 recurrent하게 전달하여 node state를 업데이트 한다. 이 과정을 node state가 수렴할 때까지 iteration을 반복해야 한다.
 
 **3. Graph Echo State Networks, GraphESN (2010)[^5]**
 
-해당 방법을 간단히 설명하자면 encoder와 output layer로 구성되어 있고 encoder를 통해 전체 graph를 나타내는 값으로 변환한 뒤 고정한다. 이름과 같이 고정된 encoder를 echo로서 언급한 듯 하다. encoder를 학습하는 방법은 contractive state transition function을 통해 recurrent하게 노드를 업데이트하며 global graph state가 수렴할 때까지 반복한다.  
+GraphESN을 간단히 설명하자면 encoder와 output layer로 구성되어 있고 encoder를 통해 전체 graph를 나타내는 값으로 변환한 뒤 고정한다. 이름과 같이 고정된 encoder를 echo로서 언급한 듯 하다. encoder를 학습하는 방법은 contractive state transition function을 통해 recurrent하게 노드를 업데이트하며 global graph state가 수렴할 때까지 반복한다.  
 
 - **[Author github (python)](https://github.com/gvisco/GraphESN)**
 
@@ -110,9 +110,9 @@ SSE는 앞선 large sacle 모델에 대한 메모리 문제점을 해결할 수 
 
 ## Spectral vs Spatial 
 
-일반적으로 Graph data에 Convolution을 적용하기 위해 크게 spectral과 spatial 두 가지 관점으로 접근한다. Spectral 모델은 graph signal processing으로 접근하여 이론적인 기반이 튼튼하다는 장점이 있지만 spatial 모델들에 비해 **효율성(efficiency)**, **일반화(generality)**, 그리고 **유연성(flexibility)**가 떨어진다는 단점이 있다. 이러한 이유로 보통은 spatial 모델을 더 선호한다고 한다. 
+일반적으로 Graph data에 Convolution을 적용하기 위해 크게 spectral과 spatial 두 가지 관점으로 접근한다. Spectral 모델은 graph signal processing으로 접근하여 이론적인 기반이 튼튼하다는 장점이 있지만 spatial 모델들에 비해 **효율성(efficiency)**, **일반화(generality)**, 그리고 **유연성(flexibility)**이 떨어진다는 단점이 있다. 이러한 이유로 보통은 spatial 모델을 더 선호한다고 한다. 
 
-첫 번째로 spectral 모델을 사용하기 위해서는 eigenvector를 사용하기 때문에 연산 시간이 많이 소비되고 배치 단위로 학습이 안되기 때문에 사이즈가 큰 데이터는 비효율적이라는 단점이 있다. 두 번째로 spectral 모델은 학습한 데이터의 Fourier basis를 기반으로 하기 때문에 새로운 데이터를 적용했을 때 기존에 가지고 있던 eigenbasis가 변하기 때문에 일반화가 떨어진다는 단점이 있다. 마지막으로 spectral 모델은 undirected graph에 제한되어 있기 때문에 다른 graph에는 사용할 수 없다는 단점이 있다. 
+첫 번째로 spectral 모델을 사용하기 위해서는 eigenvector를 사용하기 때문에 연산 시간이 많이 소비되고 배치 단위로 학습이 안되기 때문에 사이즈가 큰 데이터는 비효율적이라는 단점이 있다. 두 번째로 spectral 모델은 학습한 데이터의 Fourier basis를 기반으로 하기 때문에 새로운 데이터를 적용했을 때 기존에 가지고 있던 eigenbasis가 변해서 일반화가 떨어진다는 단점이 있다. 마지막으로 spectral 모델은 undirected graph에 제한되어 있기 때문에 다른 graph에는 사용할 수 없다는 단점이 있다. 
 
 종합해보면 결국 spectral은 이론적으로는 훌륭하나 써먹을 곳이 많지 않다는 말이다. 조금 더 다양한 graph에 적용할 수 있고 사이즈가 큰 데이터에도 학습할 수 있는 spatial 모델들이 더 유용한 것 같다. 
 
@@ -135,23 +135,23 @@ $$\textbf{x}*_{G}\textbf{g}_\theta = \textbf{U}\textbf{g}_\theta \textbf{U}^T\te
 
 **1. Spectral Convolutional Neural Network, Spectral CNN (2013)[^8]**
 
-Spectral CNN은 아래 **식 (3)**을 통해 convolution 연산을 한다. 이미지에서 사용되는 convolution과 마찬가지로 pooling을 통해 이웃들 같의 정보를 합하여 layer를 쌓아나간다. 
+Spectral CNN은 아래 **식 (3)**을 통해 convolution 연산을 한다. 이미지에서 사용되는 convolution과 마찬가지로 pooling을 통해 이웃들 간의 정보를 합하여 layer를 쌓아나간다. 
 
 $$\textbf{H}_{:,j}^{k} = \sigma(\sum_{i=1}^{f_{k-1}} \textbf{U}\Theta_{i,j}^{(k)}\textbf{U}^T\textbf{H}_{:,j}^{(k-1)}), \ (j=1,2,\cdots,f_k) \tag{3}$$
 
-여기서 $$k$$는 layer index이고 $$\textbf{H}^{(k-1)} \in \mathbb{R}^{n \times f_{k-1}}$$은 입력값인 graph signal을 말한다. 이때 초기 입력값은 $$\textbf{H}^{(0)}=\textbf{X}$$이다. $$f_{k-1}$$은 입력값의 채널 수이고 $$f_k$$는 출력값의 채널 수 이다. $$\Theta_{i,j}^{(k)}는 학습 파라미터로 단위행렬이다. 
+여기서 $$k$$는 layer index이고 $$\textbf{H}^{(k-1)} \in \mathbb{R}^{n \times f_{k-1}}$$은 입력값인 graph signal을 말한다. 이때 초기 입력값은 $$\textbf{H}^{(0)}=\textbf{X}$$이다. $$f_{k-1}$$은 입력값의 채널 수이고 $$f_k$$는 출력값의 채널 수 이다. $$\Theta_{i,j}^{(k)}는 학습 파라미터로 단위 행렬이다. 
 
 Spectral CNN은 크게 세 가지 단점이 있다. 첫 번째로는 만약 학습된 모델에 기존 graph signal을 약간만 perturbation을 적용해도 eigenbasis가 바뀌어 버린다. 이는 spectral 모델의 큰 단점이기도 하다. 두 번째로는 학습한 filter를 다른 graph 구조를 가지고 있는 domain에 적용할 수 없다는 단점이 있다. 마지막으로 eigen-decomposition을 하기위한 연산 시간이 $$O(n^3)$$으로 오래걸린다는 단점이 있다. 
 
 **2. Chebyshev Spectral CNN, ChebNet (2016)[^10]**
 
-ChebNet은 이러한 Spectral CNN 연산시간을 Chebyshev polynomial of the first kind를 통해 filter를 근사하여 시간 복잡도를 $$O(m)$$으로 낮추었다. 
+ChebNet은 이러한 Spectral CNN 연산시간을 Chebyshev polynomial of the first kind를 통해 filter를 근사하여 시간 복잡도를 $$O(m)$$으로 낮추었다. 또한 filter를 다항식으로 바꿔서 graph 사이즈와는 별개로 local feature를 추출할 수 있다는 장점이 있다. 이 말이 직관적으로 와닿지 않는다면 "[Spectral GCN 은… 사드세요 - Graph Convolution에서 GCN으로의 과정](https://tootouch.github.io/research/spectral_gcn/#graph-convolution에서-gcn으로의-과정)"을 읽어보는 것을 추천한다.
 
 Chebyshev polynomial of the first kind는 convolution filter를 **식 (4)**와 같이 정의 할 수 있다
 
 $$\textbf{g}_\theta=\sum_{i=0}^{K}\theta_iT_{i}(\tilde{\Lambda}), \ \ \tilde{\Lambda}=\frac{2\Lambda}{\lambda_{max}}-I_n \ \ (-1 < \tilde{\Lambda} <1 ) \tag{4}$$
 
-여기서 $$\tilde{\Lambda}$$는 $$\Lambda$$를 [-1,1] 범위로 스케일링 한 값이다. $$T(\cdot)$$은 Chebyshev polynomial function이다. Chebyshev polynomial of first kind에서 다항식은 다음 **식 (5)**를 따른다.
+여기서 $$\tilde{\Lambda}$$는 $$\Lambda$$를 [-1,1] 범위로 스케일링 한 값이다. $$T(\cdot)$$은 Chebyshev polynomial function이다. Chebyshev polynomial of the first kind에서 다항식은 다음 **식 (5)**를 따른다.
 
 $$T_{n+1}(x) = 2xT_n(x) -T_{n-1}(x) \tag{5}$$
 
@@ -163,13 +163,11 @@ $$\textbf{x}*_{G}\textbf{g}_\theta = \textbf{U}(\sum_{i=0}^{K}\theta_iT_{i}(\til
 
 $$\textbf{x}*_{G}\textbf{g}_\theta = \sum_{i=0}^{K}\theta_iT_{i}(\mathcal{L})\textbf{x} \tag{7}$$
 
-하지만 ChebNet의 단점으로는 graph size만큼 학습한다는 단점이 있다. 즉, local feature를 따로 볼 수 없다는 점이다. 여기서 local feature가 무슨 말인지 이해가 안된다면 "[Spectral GCN 은… 사드세요 - Graph Convolution에서 GCN으로의 과정](https://tootouch.github.io/research/spectral_gcn/#graph-convolution에서-gcn으로의-과정)"의 예시를 참고 하면 이해가 쉽다.
-
 - **[Author github (Tensorflow)](https://github.com/mdeff/cnn_graph)**
 
 **3. Graph Convoluional Network, GCN (2017)[^11]**
 
-GCN는 ChebNet의 단점인 local feature를 고려할 수 있는 구조로 바꾸었다. **식 (7)**에서 $$K=1$$로 $$\lambda_{max}=2$$로 정의하였고 $$\theta = \theta_0 = -\theta_1$$로 parameter를 줄이면서 over-fitting을 방지하면서 식을 더 간단하게 정의할 수 있게 되었다. 마지막으로 renormalization trick을 적용하여 최종적으로 **식 (8)**과 같이 나타내었다. 여기서도 중간 과정에 대해 궁금하다면 "[Spectral GCN 은… 사드세요 - GCN](https://tootouch.github.io/research/spectral_gcn/#gcn)"을 참고하면 생략된 과정과 renormalization trick에 대해 이해할 수 있다. 
+GCN는 **식 (7)**에서 $$K=1$$로 $$\lambda_{max}=2$$로 정의하였고 $$\theta = \theta_0 = -\theta_1$$로 parameter를 줄이면서 over-fitting을 방지하면서 식을 더 간단하게 정의할 수 있게 되었다. 마지막으로 renormalization trick을 적용하여 최종적으로 **식 (8)**과 같이 나타내었다. 여기서도 중간 과정에 대해 궁금하다면 "[Spectral GCN 은… 사드세요 - GCN](https://tootouch.github.io/research/spectral_gcn/#gcn)"을 참고하면 생략된 과정과 renormalization trick에 대해 이해할 수 있다. 
 
 $$\textbf{H} = \textbf{X} *_G \textbf{g}_\Theta = f(\bar{\textbf{A}}\textbf{X}\Theta) \tag{8}$$ 
 
@@ -204,7 +202,7 @@ DGCN은 이러한 dual graph convolutional layers를 통해서 결과를 ensembl
     <img width='400' src='https://user-images.githubusercontent.com/37654013/106140853-a8dc1280-61b2-11eb-9b17-e9c8b817357d.png'><br>그림 7. Spatial 기반 GCNs Roadmap
 </p> 
 
-이미지에서 사용하는 convolution과 유사하게 spatial 기반의 방법들은 노드들의 spatial 관계를 활용하여 학습하는 방법이다. Spetial 관계라는건 중심 노드와 주변 노드의 관계를 말한다. Spatial 모델의 학습 과정은 convolution 과정을 통해서 중심 노드와 주변 노드의 representation을 학습하여 중심 노드의 representation을 업데이트 하는 방식을 말한다. 또다른 관점으로는 spatial 기반 GCN 모델은 앞서 설명한 RecGNNs의 information propagation 또는 message passing과 같은 개념으로 볼 수 있다. 즉, Spatial 모델 또한 edge를 통해 각 노드의 information을 전달하는 방식이다. 
+이미지에서 사용하는 convolution과 유사하게 spatial 기반의 방법들은 노드들의 spatial 관계를 활용하여 학습하는 방법이다. Spetial 관계 라는건 중심 노드와 주변 노드의 관계를 말한다. Spatial 모델의 학습 과정은 convolution 과정을 통해서 중심 노드와 주변 노드의 representation을 학습하여 중심 노드의 representation을 업데이트 하는 방식을 말한다. 또다른 관점으로는 spatial 기반 GCN 모델은 앞서 설명한 RecGNNs의 information propagation 또는 message passing과 같은 개념으로 볼 수 있다. 즉, Spatial 모델 또한 edge를 통해 각 노드의 information을 전달하는 방식이다. 
 
 **1. Neural Network for Graphs, NN4G (2009)[^15]**
 
@@ -428,7 +426,7 @@ GraphSage는 spatial 기반 모델에서 설명했지만 network embedding에도
 
 $$L(\textbf{z}_v) = -\log(\sigma(\textbf{z}_v^T \textbf{z}_u)) - QE_{v_n ~ P_n{(v)}}\log(\sigma(-\textbf{z}_v^T\textbf{z}_{v_n})) \tag{27}$$
 
-여기서 노드 $$u$$은 노드 $$v$$의 이웃을 말하고 노드 $$v_n$$은 노드 $$v$$와 멀리 떨어진 노드를 말한다. 노드 $$v_n$$은 negative sampling distribution $$P_n(v)$$에서 추출한다. $$Q$$는 negative sample의 수 이다. $$\sigma(\cdot)$$은 sigmoid function을 말한다. **식 (27)**의 loss function에 대해 해석하자면 유사한 representation을 갖는 노드는 가깝게하고 다른 representation을 갖는 노드는 더 멀게 한다고 볼 수 있다.
+여기서 노드 $$u$$은 노드 $$v$$의 이웃을 말하고 노드 $$v_n$$은 노드 $$v$$와 멀리 떨어진 노드를 말한다. 노드 $$v_n$$은 negative sampling distribution $$P_n(v)$$에서 추출한다. $$Q$$는 negative sample의 수 이다. $$\sigma(\cdot)$$은 sigmoid function을 말한다. **식 (27)**의 loss function에 대해 해석하자면 유사한 representation을 갖는 노드는 가깝게하고 다른 representation을 갖는 노드는 더 멀게 한다고 볼 수 있다. 다른 말로는 만약 유사한 노드가 서로 다른 representation을 갖게되면 내적값이 작아지게 되어 첫 번째 term의 값을 키우게 되고 서로 다른 노드가 유사한 representation을 갖게 되면 내적값이 커져서 두 번째 term의 값이 커지게 된다.
 
 - **[Author github (Tensorflow)](https://github.com/williamleif/GraphSAGE)**
 
