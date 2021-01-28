@@ -201,7 +201,7 @@ DGCN은 이러한 dual graph convolutional layers를 통해서 결과를 ensembl
 ## Spatial models
 
 <p align='center'>
-    <img width='400' src='"https://user-images.githubusercontent.com/37654013/106140853-a8dc1280-61b2-11eb-9b17-e9c8b817357d.png'><br>그림 7. Spatial 기반 GCNs Roadmap
+    <img width='400' src='https://user-images.githubusercontent.com/37654013/106140853-a8dc1280-61b2-11eb-9b17-e9c8b817357d.png'><br>그림 7. Spatial 기반 GCNs Roadmap
 </p> 
 
 이미지에서 사용하는 convolution과 유사하게 spatial 기반의 방법들은 노드들의 spatial 관계를 활용하여 학습하는 방법이다. Spetial 관계라는건 중심 노드와 주변 노드의 관계를 말한다. Spatial 모델의 학습 과정은 convolution 과정을 통해서 중심 노드와 주변 노드의 representation을 학습하여 중심 노드의 representation을 업데이트 하는 방식을 말한다. 또다른 관점으로는 spatial 기반 GCN 모델은 앞서 설명한 RecGNNs의 information propagation 또는 message passing과 같은 개념으로 볼 수 있다. 즉, Spatial 모델 또한 edge를 통해 각 노드의 information을 전달하는 방식이다. 
