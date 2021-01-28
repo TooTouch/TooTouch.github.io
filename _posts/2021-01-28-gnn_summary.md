@@ -139,7 +139,7 @@ Spectral CNN은 아래 **식 (3)**을 통해 convolution 연산을 한다. 이�
 
 $$\textbf{H}_{:,j}^{k} = \sigma(\sum_{i=1}^{f_{k-1}} \textbf{U}\Theta_{i,j}^{(k)}\textbf{U}^T\textbf{H}_{:,j}^{(k-1)}), \ (j=1,2,\cdots,f_k) \tag{3}$$
 
-여기서 $$k$$는 layer index이고 $$\textbf{H}^{(k-1)} \in \mathbb{R}^{n \times f_{k-1}}$$은 입력값인 graph signal을 말한다. 이때 초기 입력값은 $$\textbf{H}^{(0)}=\textbf{X}$$이다. $$f_{k-1}$$은 입력값의 채널 수이고 $$f_k$$는 출력값의 채널 수 이다. $$\Theta_{i,j}^{(k)}는 학습 파라미터로 단위 행렬이다. 
+여기서 $$k$$는 layer index이고 $$\textbf{H}^{(k-1)} \in \mathbb{R}^{n \times f_{k-1}}$$은 입력값인 graph signal을 말한다. 이때 초기 입력값은 $$\textbf{H}^{(0)}=\textbf{X}$$이다. $$f_{k-1}$$은 입력값의 채널 수이고 $$f_k$$는 출력값의 채널 수 이다. $$\Theta_{i,j}^{(k)}$$는 학습 파라미터로 단위 행렬이다. 
 
 Spectral CNN은 크게 세 가지 단점이 있다. 첫 번째로는 만약 학습된 모델에 기존 graph signal을 약간만 perturbation을 적용해도 eigenbasis가 바뀌어 버린다. 이는 spectral 모델의 큰 단점이기도 하다. 두 번째로는 학습한 filter를 다른 graph 구조를 가지고 있는 domain에 적용할 수 없다는 단점이 있다. 마지막으로 eigen-decomposition을 하기위한 연산 시간이 $$O(n^3)$$으로 오래걸린다는 단점이 있다. 
 
