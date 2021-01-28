@@ -513,7 +513,7 @@ GraphVAE는 한번에 graph representation을 만들어내지만 생성된 graph
 
 **5. Regularized Graph Variational Autoencoder, RGVAE (2018)[^42]**
 
-RGVAE는 앞서 언급한 challenge 중 validity에 대해 decoder의 output distribution을 정규화하여 graph variational autoencoderdp 제약 조건을 추가한 방법이다. 
+RGVAE는 앞서 언급한 challenge 중 validity에 대해 decoder의 output distribution을 정규화하여 graph variational autoencoder에 제약 조건을 추가한 방법이다. 
 
 - **[Unofficial Pytorch](https://github.com/INDElab/rgvae)** 
 
