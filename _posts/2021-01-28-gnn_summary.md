@@ -90,21 +90,21 @@ neural network static infromation or temporal sequence structure data 에는 잘
 
 해당 방법을 간단히 설명하자면 encoder와 output layer로 구성되어 있고 encoder를 통해 전체 graph를 나타내는 값으로 변환한 뒤 고정한다. 이름과 같이 고정된 encoder를 echo로서 언급한 듯 하다. encoder를 학습하는 방법은 contractive state transition function을 통해 recurrent하게 노드를 업데이트하며 global graph state가 수렴할 때까지 반복한다.  
 
-- **Author github (python)** : https://github.com/gvisco/GraphESN
+- **[Author github (python)](https://github.com/gvisco/GraphESN)**
 
 **4. Gated graph sequence neural networks, GGNN (2015)[^6]**
 
 이전에는 수렴할 때까지 iteration을 반복해야 한다는 단점이 있었지만 GGNN은 step 수를 고정해서 학습하기 때문에 convergence를 위한 iteration parameter가 없다는 것이 장점이다. 또한 이름에서와 같이 recurrent function으로 gated recurrent unit (GRU)을 사용하였다. 이전 GNN과 GraphESN 과의 차이점이라면 back-propagation through time (BPTT)를 사용했다는 것이지만 이러한 방법이 단점이 되기도 한다. Large scale 모델의 경우 모든 node에 대해 intermediate state를 가지고 있어야하기 때문에 memory가 많이 필요하다는 게 흠이다. 
 
-- **Author github (Lua)** : https://github.com/yujiali/ggnn
-- **Pytorch** : https://github.com/chingyaoc/ggnn.pytorch
-- **Tensorflow** : https://github.com/microsoft/tf-gnn-samples
+- **[Author github (Lua)](https://github.com/yujiali/ggnn)** 
+- **[Unofficial Pytorch](https://github.com/chingyaoc/ggnn.pytorch)** 
+- **[Unofficial Tensorflow](https://github.com/microsoft/tf-gnn-samples)** 
 
 **5. Stochastic Steady-state Embedding, SSE (2018)[^7]**
 
 SSE는 앞선 large sacle 모델에 대한 메모리 문제점을 해결할 수 있는 방법이다. Node의 hidden state를 stochastic 방식으로 업데이트 하기 때문에 node를 배치로 샘플링해서 업데이트 할 수 있고 gradient 또한 마찬가지로 배치 단위로 계산한다. 하지만 이러한 배치 단위의 학습이 stability를 낮출 수 있는데 이전 state와 현재 state에 가중 평균을 적용해서 stability를 높였다.
 
-- **Author github (C++)** : https://github.com/Hanjun-Dai/steady_state_embedding
+- **[Author github (C++)](https://github.com/Hanjun-Dai/steady_state_embedding)** 
 
 # Convolutional Graph Neural Networks (ConvGNNs)
 
@@ -165,7 +165,7 @@ $$\textbf{x}*_{G}\textbf{g}_\theta = \sum_{i=0}^{K}\theta_iT_{i}(\mathcal{L})\te
 
 하지만 ChebNet의 단점으로는 graph size만큼 학습한다는 단점이 있다. 즉, local feature를 따로 볼 수 없다는 점이다. 여기서 local feature가 무슨 말인지 이해가 안된다면 "[Spectral GCN 은… 사드세요 - Graph Convolution에서 GCN으로의 과정](https://tootouch.github.io/research/spectral_gcn/#graph-convolution에서-gcn으로의-과정)"의 예시를 참고 하면 이해가 쉽다.
 
-- **Author github (Tensorflow)** : https://github.com/mdeff/cnn_graph
+- **[Author github (Tensorflow)](https://github.com/mdeff/cnn_graph)**
 
 **3. Graph Convoluional Network, GCN (2017)[^11]**
 
@@ -177,14 +177,14 @@ $$\textbf{H} = \textbf{X} *_G \textbf{g}_\Theta = f(\bar{\textbf{A}}\textbf{X}\T
 
 Spatial 관점에서 보자면 GCN 또한 layer를 쌓으면서 이웃 노드들의 정보를 aggregation하여 학습하기 때문에 비슷한 방법으로 볼 수 있다. 
 
-- **Author github (Tensorflow)** : https://github.com/tkipf/gcn
-- **Author github (Pytorch)** : https://github.com/tkipf/pygcn
+- **[Author github (Tensorflow)](https://github.com/tkipf/gcn)** 
+- **[Author github (Pytorch)](https://github.com/tkipf/pygcn)** 
 
 **4. Adaptive Graph Convolutional Network, AGCN (2018)[^13]**
 
 AGCN는 adjacency matrix로 표현되지 않은 노드 간의 관계를 학습하기 위해 "residual graph adjacency matrix"라는 것을 활용한다. 입력값으로 들어오는 두 노드의 거리를 학습 파라미터로 사용하여 학습한다. 
 
-- **Author github (Tensorflow)** : https://github.com/uta-smile/Adaptive-Graph-Convolutional-Network
+- **[Author github (Tensorflow)](https://github.com/uta-smile/Adaptive-Graph-Convolutional-Network)** 
 
 **5. Dual Graph Convolutional Network, DGCN (2018)[^14]**
 
@@ -196,7 +196,7 @@ $$PPMI_{v_1,v_2} = max(log(\frac{count(v_1, v_2)\cdot |\textbf{D}|}{count(v_1)co
 
 DGCN은 이러한 dual graph convolutional layers를 통해서 결과를 ensemble하여 layer를 깊게 쌓지 않아도 local 정보와 global 정보를 함께 encoding 할 수 있는 방법이다. 
 
-- **Author github (Theano)** : https://github.com/ZhuangCY/DGCN
+- **[Author github (Theano)](https://github.com/ZhuangCY/DGCN)** 
 
 ## Spatial models
 
@@ -220,13 +220,13 @@ $$\textbf{H}^{(k)} = f(\textbf{X}\textbf{W}^{(k)} + \sum_{i=1}^{k-1} \textbf{A}\
 
 **식 (11)**을 보면 GCN[^11]과 유사한 것을 알 수 있다. 차이가 있다면 NN4G는 unnormalized adjacency matrix $$(\textbf{A})$$를 사용한다는 것이다. 하지만 $$\textbf{A}$$를 사용하게 되는 경우 hidden state node가 서로 다른 scale이 될 수 있는 단점이 있다. 
 
-- **Pytorch** : https://github.com/EmanueleCosenza/NN4G
+- **[Unofficial Pytorch](https://github.com/EmanueleCosenza/NN4G)** 
 
 **2. Contextual Graph Markov Model, CGMM (2018)[^17]**
 
 CGMM은 NN4G의 아이디어를 기반으로 제안한 확률 모델이다. CGMM의 장점으로는 확률적인 해석이 가능하다는 장점이 있다. Survey 논문에서는 CGMM에 대해 크게 다루지 않았으므로 추가적으로 알고자 한다면 논문을 참고하는 것이 좋을 듯 하다.
 
-- **Author github (Pytorch)** : https://github.com/diningphil/CGMM
+- **[Author github (Pytorch)](https://github.com/diningphil/CGMM)** 
 
 **3. Diffusion Convolutional Neural Network, DCNN (2016)[^16]**
 
@@ -246,7 +246,7 @@ $$\textbf{H} = \sum_{k=0}^{K}f(\textbf{P}^k\textbf{X}\textbf{W}^{(k)}) \tag{13}$
 
 여기서 $$\textbf{W}^{(k)} \in \mathbb{R}^{D \times F}$$이고 $$f(\cdot)$$은 activation function이다. 확률 matrix의 승을 사용한다는 의미는 멀리 있는 이웃 노드의 information이 중심 노드에 적게 영향을 주기 위함이라고 볼 수 있다.
 
-- **Author github (Tensorflow)** : https://github.com/liyaguang/DCRNN
+- **[Author github (Tensorflow)](https://github.com/liyaguang/DCRNN)** 
 
 
 **5. PGC-DGCNN (2018)[^19]**
@@ -259,7 +259,7 @@ $$\textbf{H}^{(k)} = \|_{j=0}^{r} f((\tilde{\textbf{D}}^{(j)})^{-1}\textbf{S}^{(
 
 앞서 말한 '먼 이웃의 기여도를 키운다'는 **식 (14)**에서 볼 수 있듯이 receptive field의 크기에 따라 중심 노드로 부터 멀리 떨어진 노드도 함께 고려할 수 있다는 말이다. 하지만 PGC-DGCNN의 단점으로는 $$\textbf{S}^{(j)}$$를 계산하는데 드는 시간 복잡도가 $$O(n^3)$$이라는 점이다.
 
-- **Pytorch** : https://github.com/dinhinfotech/PGC-DGCNN
+- **[Unofficial Pytorch](https://github.com/dinhinfotech/PGC-DGCNN)** 
 
 
 **6. Partition Graph Convolution, PGC (2018)[^20]**
@@ -270,7 +270,7 @@ $$\textbf{H}^{(k)} = \sum_{j=1}^{Q} \bar{\textbf{A}}^{(j)}\textbf{H}^{(k-1)}\tex
 
 여기서 $$\textbf{H}^{(0)} = \textbf{X}$$, $$\bar{\textbf{A}}^{(j)} = (\tilde{\textbf{D}}^{(j)})^{-1/2}\tilde{\textbf{A}}^{(j)}(\tilde{\textbf{D}}^{(j)})^{-1/2}$$ 그리고 $$\tilde{\textbf{A}}^{(j)} = \textbf{A}^{(j)} + \textbf{I}$$이다. 
 
-- **Author github (Pytorch)** : https://github.com/open-mmlab/mmskeleton
+- **[Author github (Pytorch)](https://github.com/open-mmlab/mmskeleton)**
 
 **7. Message Passing Neural Network, MPNN (2017)[^21]** 
 
@@ -284,7 +284,7 @@ $$\textbf{h}_G = R(\textbf{h}_v^{(K)}|v\in G) \tag{17}$$
 
 여기서 $$R(\cdot)$$은 학습 파라미터가 있는 readout function을 말한다. MPNN은 $$U_k(\cdot)$$, $$M_k(\cdot)$$, 그리고 $$R(\cdot)$$을 다른 형태로 나타내어 다른 GNNs에 적용할 수 있다. 하지만 미리 학습된 graph embedding 으로 다른 graph structure에 사용할 수 없다는 단점이 있다.
 
-- **Author github (Tensorflow)** : https://github.com/brain-research/mpnn
+- **[Author github (Tensorflow)](https://github.com/brain-research/mpnn)** 
 
 **8. Graph Isomorphism Network, GIN (2019)[^22]**
 
@@ -294,7 +294,7 @@ $$\textbf{h}_v^{(k)} = MLP((1+\epsilon^{(k)})\textbf{h}_v^{(k-1)} + \sum_{u \in 
 
 논문에서는 GIN에 대한 내용은 이게 전부지만 $$\epsilon^{(k)}$$에 대하여 수식을 통해 이해한 바로는 주변 이웃의 수가 많아짐에 따라 중심 노드의 information이 사라질 수 있으니 $$\epsilon^{(k)}$$를 조정하여 중심 노드의 information 값을 키우는 것이 아닌다 싶다.
 
-- **Author github (Pytorch)** : https://github.com/weihua916/powerful-gnns
+- **[Author github (Pytorch)](https://github.com/weihua916/powerful-gnns)** 
 
 **9. GraphSage (2017)[^23]**
 
@@ -304,7 +304,7 @@ $$\textbf{h}_v^{(k)} = \sigma(\textbf{W}^{(k)} \cdot f_k(\textbf{h}_v^{(k-1)}, \
 
 여기서 $$\textbf{h}_v^{(0)}=\textbf{x}_v$$이고 $$f_k(\cdot)$$은 aggregation function, 그리고 $$S_{N(v)}$$은 노드 $$v$$의 이웃 노드에 대한 샘플을 말한다. 이때 aggregation function은 mean, sum, 또는 max function과 같이 노드의 순서가 바뀌어도 같은 값이 나오도록 하는 invariant여야 한다. 
 
-- **Author github (Tensorflow)** : https://github.com/williamleif/GraphSAGE
+- **[Author github (Tensorflow)](https://github.com/williamleif/GraphSAGE)** 
 
 **10. Graph Attention Network, GAT (2017)[^24]**
 
@@ -318,20 +318,20 @@ $$\alpha_{vu}^{(k)} = softmax(g(\textbf{a}^T[\textbf{W}^{(k)}\textbf{h}_v^{(k-1)
 
 여기서 $$g(\cdot)$$은 LeakyReLU activation function 이고 $$\textbf{a}$$는 학습 parameter이다. Softmax function은 노드 $$v$$의 모든 이웃의 attention weigth 합이 1이 되게하기 위해 사용하였다. GAT는 또한 multi-head attention을 사용하여 모델 성능을 더욱 향상 시킬 수 있고 실제로도 GraphSage 보다 node classification 문제에서 더 좋은 성능을 나타내었다. 
 
-- **Author github (Tensorflow)** : https://github.com/PetarV-/GAT
-- **Pytorch** : https://github.com/Diego999/pyGAT
+- **[Author github (Tensorflow)](https://github.com/PetarV-/GAT)** 
+- **[Unofficial Pytorch](https://github.com/Diego999/pyGAT)**
 
 **11. Gated Attention Network, GaAN (2018)[^25]**
 
 GAT에서는 각각의 attention head의 기여도를 동일하게 적용하였지만 GaAN에서는 self-attention mechanism을 추가하여 각 attention head에 추가로 attention score를 계산하였다. 
 
-- **Author github (MXNet)** : https://github.com/jennyzhang0215/GaAN
+- **[Author github (MXNet)](https://github.com/jennyzhang0215/GaAN)** 
 
 **12. GeniePath (2019)[^26]**
 
 GeniePath는 LSTM 같은 gate mechanism을 통해 information을 조절하여 사용하는 방법이다. 별다른 소개가 더는 없어서 만약 내용이 궁금하다면 논문을 보는 것이 좋을 듯 하다.
 
-- **Pytorch** : https://github.com/shawnwang-tech/GeniePath-pytorch
+- **[Unofficial Pytorch](https://github.com/shawnwang-tech/GeniePath-pytorch)**
 
 **13. Mixture Model Network, MoNet (2017)[^27]**
 
@@ -339,8 +339,8 @@ MoNet은 노드의 이웃에 각각 다른 가중치를 주는 방법이다. 각
 
 Pseudo-coordinates는 아마 transformer[^52]에서 사용되는 position-embedding 이나 CoordConv[^53]에서 사용되는 coordinate convolution과 같은 의미가 아닐까 싶다.
 
-- **Tensorflow** : https://github.com/HeapHop30/graph-attention-nets
-- **Pytorch** : https://github.com/theswgong/MoNet
+- **[Unofficial Tensorflow](https://github.com/HeapHop30/graph-attention-nets)** 
+- **[Unofficial Pytorch](https://github.com/theswgong/MoNet)** 
 
 **14. PATCHY-SAN (2016)[^28]**
 
@@ -350,13 +350,13 @@ PATCHY-SAN은 서로 다른 위치에 따라 가중치를 주는 방법 중 하�
 
 PATCHY-SAN의 단점으로는 ranking 기준이 graph structure에만 적용된다는 점이고 이는 연산량이 크다는 단점이 있다.
 
-- **Keras** : https://github.com/tvayer/PSCN
+- **[Unofficial Keras](https://github.com/tvayer/PSCN)** 
 
 **15. Large-scale Graph Convolutional Network, LGCN (2018)[^29]**
 
 LGCN은 노드의 feature information을 기준으로 이웃 노드의 순위를 정한다. LGCN의 feature matrix는 이웃 노드로 구성되어 있고 열을 기준으로 정렬하여 상위 $$q$$개를 중심 노드의 입력값으로 사용한다. 
 
-**Author github (Tensorflow)** : https://github.com/divelab/lgcn
+- **[Author github (Tensorflow)](https://github.com/divelab/lgcn)** 
 
 # Graph AutoEncoders (GAEs)
 
@@ -374,7 +374,7 @@ Network embedding은 노드의 topological information을 가지면서 저차원
 
 DNGR은 "stacked denoising autoencoder"를 사용하여 encoding하고 MLP를 통해 PPMI로 decoding하는 방법이다. 
 
-- **Author github (Tensorflow)** : https://github.com/ShelsonCao/DNGR
+- **[Author github (Tensorflow)](https://github.com/ShelsonCao/DNGR)** 
 
 **2. Structural Deep Network Embedding, SDNE (2016)[^31]**
 
@@ -394,7 +394,7 @@ $$L_{2nd} = \sum_{v \in V} \| (dec(enc(\textbf{x}_v)) - \textbf{x}_v) \odot \tex
 
 DNGR과 SDNE의 단점은 노드의 information은 무시한 채 두 노드 간의 연결성(connectivity), 즉 노드 구조만 고려한다는 점이다. 
 
-- **Tensorflow** : https://github.com/shenweichen/GraphEmbedding
+- **[Unofficial Tensorflow](https://github.com/shenweichen/GraphEmbedding)** 
 
 **3. Graph Autoencoder, GAE (2016)[^32]**
 
@@ -408,7 +408,7 @@ $$\hat{\textbf{A}}_{v,u} = dec(\textbf{z}_v, \textbf{z}_u) = \sigma(\textbf{z}_v
 
 여기서 $$\textbf{z}_v$$는 노드 $$v$$의 embedding이다. GAE$$*$$는 real adjacency matrix $$(\textbf{A})$$와 reconstructed adjacency matrix $$(\hat{\textbf{A}})$$을 통해 negative cross entropy가 최소화 되는 방향으로 학습한다. 하지만 GAE$$*$$의 단점으로는 overfitting이 잘된다는 것이다.
 
-- **Author github (Tensorflow)** : https://github.com/tkipf/gae
+- **[Author github (Tensorflow)](https://github.com/tkipf/gae)**
 
 **4. Variational Graph Autoencoder, VGAE (2016)[^32]**
 
@@ -420,7 +420,7 @@ $$L = E_{q(\textbf{Z} | \textbf{X}, \textbf{A})} [\log p(\textbf{A}|\textbf{Z})]
 
 Mean vector $$\mu_i$$는 **식 (24)**에서 정의한 encoder output의 $$i^{th}$$ 행이고 $$\log \sigma_i$$는 $$\mu_i$$와 같이 다른 encoder로 계산된다. **식 (26)**에서 정의하듯이 VGAE는 empirical distribution $$q(\textbf{Z} \mid \textbf{X}, \textbf{A})$$가 prior distribution $$p(\textbf{Z})$$와 근사해지도록 학습한다. 
 
-- **Author github (Tensorflow)** : https://github.com/tkipf/gae
+- **[Author github (Tensorflow)](https://github.com/tkipf/gae)** 
 
 **5. GraphSage (2017)[^23]**
 
@@ -430,13 +430,13 @@ $$L(\textbf{z}_v) = -\log(\sigma(\textbf{z}_v^T \textbf{z}_u)) - QE_{v_n ~ P_n{(
 
 여기서 노드 $$u$$은 노드 $$v$$의 이웃을 말하고 노드 $$v_n$$은 노드 $$v$$와 멀리 떨어진 노드를 말한다. 노드 $$v_n$$은 negative sampling distribution $$P_n(v)$$에서 추출한다. $$Q$$는 negative sample의 수 이다. $$\sigma(\cdot)$$은 sigmoid function을 말한다. **식 (27)**의 loss function에 대해 해석하자면 유사한 representation을 갖는 노드는 가깝게하고 다른 representation을 갖는 노드는 더 멀게 한다고 볼 수 있다.
 
-- **Author github (Tensorflow)** : https://github.com/williamleif/GraphSAGE
+- **[Author github (Tensorflow)](https://github.com/williamleif/GraphSAGE)**
 
 **6. Adversarially Regularized Variational Graph Autoencoder, ARVGA (2018)[^33]**
 
 ARVGA는 GAN의 학습 방법을 사용한다. GAN의 학습 방식과 같이 ARVGA는 prior distribution $$p(\textbf{Z})$$과 구분하기 어렵도록 empirical distribution $$q(\textbf{Z} \mid \textbf{X}, \textbf{A})$$를 생성하여 encoder를 학습한다. 
 
-- **Author github (Tensorflow)** : https://github.com/Ruiqi-Hu/ARGA
+- **[Author github (Tensorflow)](https://github.com/Ruiqi-Hu/ARGA)** 
 
 **Deep Recursive Network Embedding, DRNE (2018)[^34]**
 
@@ -448,7 +448,7 @@ $$L=\sum_{v \in V} \| \textbf{z}_v - LSTM(\{ \textbf{z}_u \mid u \in N(v)\})\|^2
 
 여기서 $$\textbf{z}_v$$는 노드 $$v$$의 network embedding이고 LSTM network는 노드 $$v$$의 이웃에 대한 random sequence를 이웃 노드의 degree를 기준으로 하여 정렬한다. 하지만 seqeuce 형태이다보니 노드 순서가 바뀌는 경우 LSTM network가 invariant하지 못하다는 단점이 있다.
 
-- **Author github (Tensorflow)** : https://github.com/tadpole/DRNE
+- **[Author github (Tensorflow)](https://github.com/tadpole/DRNE)**
 
 **7. Network Representations with Adversarially Regularized Autoencoders, NetRA(2018)[^35]**
 
@@ -458,13 +458,13 @@ $$L = - E_{z~P_{data}}(\textbf{z})(dist(\textbf{z}, dec(enc(\textbf{z})))) \tag{
 
 여기서 $$dist(\cdot)$$은 노드 embedding $$\textbf{z}$$와 reconstructed $$\textbf{z}$$와의 거리를 계산하는 function이다. NetRA의 encoder와 decoder는 노드 $$v \in V$$를 시작으로 하는 random walks를 사용한 LSTM network로 구성되어 있다. ARGVA와 마찬가지로 adversarial 학습을 통해 prior distribution를 기준으로 network embedding을 학습한다. NetRA에서는 LSTM network의 문제점인 permutation variant를 따로 해결하지는 않았지만 실험적으로 NetRA의 효과를 입증했다. 
 
-- **Author github (Pytorch)** : https://github.com/chengw07/NetRA
+- **[Author github (Pytorch)](https://github.com/chengw07/NetRA)**
 
 **Deep Graph Infomax, DGI (2019)[^55]**
 
 DGI는 global structural information을 위해 local mutual information을 최대화하여 local network embedding을 유도하는 방법이다. DGI는 node classification 문제에서 기존 graph network embedding 방법보다 좋은 성능을 내는 것 뿐만 아니라 supervised learning 보다 좋은 성능을 내었다.
 
-- **Author github (Pytorch)**: https://github.com/PetarV-/DGI
+- **[Author github (Pytorch)](https://github.com/PetarV-/DGI)**
 
 ## Graph Generation
 
@@ -476,13 +476,13 @@ DGI는 global structural information을 위해 local mutual information을 최�
 
 이 세 가지 방법은 SMILES(simplifired molecular-input line-entry system)이라는 방법을 통해 encoder와 decoder에 각각 CNN과 RNN을 적용하였다. 이 방법은 분자 구조의 string representation을 생성하기 위한 방법으로 다소 domain에 특화되어 있긴 하다. 하지만 특정 기준에 수렴할때까지 반복적으로 node와 edge를 추가하며 graph를 키워나가는 방식으로 다양한 graph에 적용해 볼 수 있다.
 
-- **GrammarVAE Author github (Keras)** : https://github.com/mkusner/grammarVAE
-- **GrammarVAE Pytorch** : https://github.com/geyang/grammar_variational_autoencoder
+- **[GrammarVAE Author github (Keras)](https://github.com/mkusner/grammarVAE)** 
+- **[GrammarVAE Unofficial Pytorch](https://github.com/geyang/grammar_variational_autoencoder)** 
 
-- **Chemical-VAE Author github (Keras)** : https://github.com/aspuru-guzik-group/chemical_vae
+- **[Chemical-VAE Author github (Keras)](https://github.com/aspuru-guzik-group/chemical_vae)**
 
-- **SD-VAE Author github (Pytorch)** : https://github.com/Hanjun-Dai/sdvae
-
+- **[SD-VAE Author github (Pytorch)](https://github.com/Hanjun-Dai/sdvae
+)**
 
 
 **2. Deep Generative Model of Graphs, DeepGMG (2018)[^39]**
@@ -493,13 +493,13 @@ $$p(G) = \sum_{\pi} p(G, \pi) \tag{30}$$
 
 여기서 $$\pi$$는 노드의 순서를 말한다. **식 (30)**의 그래프에 대한 확률은 모든 노드와 edge에 대한 complex joint probability를 나타낸다. DeepGMG는 sequence of decision을 통해 노드를 추가할지 말지, edge를 더할지 말지 그리고 새로운 노드와 노드를 연결할지 말지를 정한다. 여기서 노드와 edge를 만들어내는 과정은 각 노드의 state를 보고 결정한다. Graph를 키워나가기 위한 graph state는 RecGNN을 통해 업데이트 한다.
 
-- **Pytorch** : https://github.com/JiaxuanYou/graph-generation
+- **[Unofficial Pytorch](https://github.com/JiaxuanYou/graph-generation)**
  
 **3. GraphRNN (2018)[^40]**
 
 GraphRNN에서는 각 노드와 edge를 생성하기 위해 graph-level RNN과 edge-level RNN을 사용한다. 우선 edge-level RNN이 이전 sequence에서 생성된 노드에 새로운 노드를 연결할지 나타내는 binary sequence를 만들고 graph-level RNN은 매번 node sequence에 새로운 node를 추가한다. 
 
-- **Author github (Pytorch)** : https://github.com/JiaxuanYou/graph-generation
+- **[Author github (Pytorch)](https://github.com/JiaxuanYou/graph-generation)** 
 
 **4. Graph Variational Autoencoder, GraphVAE (2018)[^41]**
 
@@ -511,26 +511,26 @@ $$L(\phi, \theta ; G) = E_{q_\phi(z \mid G)}[-\log p_theta (G \mid \textbf{z})] 
 
 GraphVAE는 한번에 graph representation을 만들어내지만 생성된 graph에 대한 graph connectivity, validity, 그리고 node compatibility를 모두 고려하는 건 역시나 어렵고 앞으로 풀어나가야할 문제다.
 
-- **Pytorch** : https://github.com/JiaxuanYou/graph-generation
+- **[Unofficial Pytorch](https://github.com/JiaxuanYou/graph-generation)** 
 
 **5. Regularized Graph Variational Autoencoder, RGVAE (2018)[^42]**
 
 RGVAE는 앞서 언급한 challenge 중 validity에 대해 decoder의 output distribution을 정규화하여 graph variational autoencoderdp 제약 조건을 추가한 방법이다. 
 
-- **Pytorch** : https://github.com/INDElab/rgvae
+- **[Unofficial Pytorch](https://github.com/INDElab/rgvae)** 
 
 **6. Molecular Generative Adversarial Network, MolGAN (2018)[^43]**
 
 MolGAN은 ConvGNN[^56], GAN[^57], 그리고 강화 학습 목적식을 추가하여 그래프를 생성하는 방법이다. MolGAN은 generator와 discriminator로 구성되어 있고 서로 번갈아 가면서 학습하며 generator의 authenticity를 높이는 방법이다. 또한 강화 학습 방식을 적용했기 때문에 추가적인 evaluator를 넣어서 이에 맞는 기준을 충족하도록 graph를 생성하기 위해 discriminator와 함께 병렬적으로 reward network를 적용했다. 
 
-- **Author github (Tensorflow)** : https://github.com/nicola-decao/MolGAN
-- **Pytorch** : https://github.com/yongqyu/MolGAN-pytorch
+- **[Author github (Tensorflow)](https://github.com/nicola-decao/MolGAN)** 
+- **[Unofficial Pytorch](https://github.com/yongqyu/MolGAN-pytorch)**
 
 **7. NetGAN (2018)[^44]**
 
 NetGAN은 random-walks를 기반으로 하여 graph를 생성하기 위해 LSTM과 Wasserstein GAN[^58]을 적용하였다. NetGAN은 앞선 방식들과 다르게 generator는 LSTM network를 통해 random walks를 생성하고 discriminator는 생성된 가짜 random walks와 진짜 random walks를 구분하도록 학습된다. 학습이 끝난 후에는 generator로 생성된 random walks를 사용하여 node의 co-occurrence matrix를 normalize하여 새로운 graph를 만들어낸다. 
 
-- **Author github (Tensorflow)** : https://github.com/danielzuegner/netgan
+- **[Author github (Tensorflow)](https://github.com/danielzuegner/netgan)** 
 
 **추가 정보** 
 
@@ -564,15 +564,15 @@ $$\textbf{H}^{(t)} = \sigma(Gconv(\textbf{X}^{(t)}, \textbf{A}; \textbf{W}) + Gc
 
 GCRN은 ChebNet[^10]과 LSTM network를 결합한 방법이다. 
 
-- **Author github (Tensorflow)** : https://github.com/youngjoo-epfl/gconvRNN
-- **Pytorch** : https://github.com/benedekrozemberczki/pytorch_geometric_temporal
+- **[Author github (Tensorflow)](https://github.com/youngjoo-epfl/gconvRNN)** 
+- **[Unofficial Pytorch](https://github.com/benedekrozemberczki/pytorch_geometric_temporal)**
 
 **2. Diffusion Convolutional Recurrent Neural Network, DCRNN(2018)[^46]**  
 
 DCRNN은 diffusion graph convolutional layer인 **식 (13)**과 GRU network를 통합한 방법이다. 또한, DCRNN은 node value의 $$K$$ step을 예측하기 위해 encoder-decoder 방식을 적용하였다. 
 
-- **Author github (Tensorflow)** : https://github.com/liyaguang/DCRNN
-- **Pytorch** : https://github.com/benedekrozemberczki/pytorch_geometric_temporal
+- **[Author github (Tensorflow)](https://github.com/liyaguang/DCRNN)** 
+- **[Unofficial Pytorch](https://github.com/benedekrozemberczki/pytorch_geometric_temporal)** 
 
 
 ## RNN based model
@@ -581,7 +581,7 @@ DCRNN은 diffusion graph convolutional layer인 **식 (13)**과 GRU network를 �
 
 Structural-RNN은 time step 마다 node label을 예측하기 위해 recurrent framework를 적용했다. 이때 사용된 recurrent framework에는 node-RNN과 edge-RNN이 사용된다. 각 노드와 edge의 temporal information은 node-RNN과 edge-RNN에 따로따로 들어간다. Temporal 이외에 spatial information을 표현하기 위해 edge-RNN의 output은 node-RNN의 입력값으로 들어간다. 단점으로는 각각의 node와 edge가 서로 다른 RNN을 사용하다보니 model complextity가 높아질 수 밖에 없다는 점이다. 하지만 이 문제는 node와 edge를 semantic group으로 나누어 같은 group에 속한 node와 edge는 같은 RNN 모델을 공유하여 연산량을 줄일 수 있다. 
 
-- **Author github (Theano)** : https://github.com/asheshjain399/RNNexp/tree/master/structural_rnn
+- **[Author github (Theano)](https://github.com/asheshjain399/RNNexp/tree/master/structural_rnn)** 
 
 ## CNN based model
 
@@ -593,15 +593,15 @@ RNN 기반의 방법들은 iterative propagation 과정에서 시간이 오래�
 
 CGCN은 1D convolution layer를 ChebNet[^10] 또는 GCN[^11]에 적용한 방법이다. 이때 spatial-temporal block을 각 sequential order에 따라 gated 1D convolutional layer, graph convolutional layer, 그리고 다시 gated 1D convolutional layer를 쌓아서 구성하였다. 
 
-- **Author github (Tensorflow)** : https://github.com/VeritasYin/STGCN_IJCAI-18
-- **Pytorch** : https://github.com/FelixOpolka/STGCN-PyTorch
-- **MXNet** : https://github.com/Davidham3/STGCN
+- **[Author github (Tensorflow)](https://github.com/VeritasYin/STGCN_IJCAI-18)** 
+- **[Unofficial Pytorch](https://github.com/FelixOpolka/STGCN-PyTorch)**
+- **[Unofficial MXNet](https://github.com/Davidham3/STGCN)**
 
 **2. ST-GCN (2018)[^49]** 
 
 ST-GCN은 spatial-temporal block을 PGC-layer **식 (15)**와 1D convolutional layer를 사용하여 구성하였다.
 
-- **Author github (Pytorch)** : https://github.com/open-mmlab/mmskeleton
+- **[Author github (Pytorch)](https://github.com/open-mmlab/mmskeleton)** 
 
 **3. Graph-WaveNet (2019)[^50]**
 
@@ -613,7 +613,7 @@ $$\textbf{A}_{adp} = softmax(ReLU(\textbf{E}_1\textbf{E}_2^T)) \tag{34}$$
 
 여기서 $$softmax$$ function은 행마다 적용한다. $$\textbf{E}_1$$은 source node embedding(시작 노드의 embedding)이고 $$\textbf{E}_2$$는 target node embedding(시작 노드로부터 연결된 노드 embedding)을 말한다. 각각은 학습 파라미터를 함께 적용하여 학습한다. $$\textbf{E}_1 \textbf{E}_2^T$$는 두 노드 간의 dependency weight를 말한다. 이러한 과정을 통해 Graph WaveNet은 adjacency matrix가 주어지지 않아도 좋은 성능을 낼 수 있다.
 
-- **Author github (Pytorch)** : https://github.com/nnzhan/Graph-WaveNet
+- **[Author github (Pytorch)](https://github.com/nnzhan/Graph-WaveNet)**
 
 ## Attention based model
 
@@ -623,13 +623,13 @@ Latent static spatial dependency를 학습하는 것은 network의 서로 다른
 
 GaAN은 spatial 기반 GCN 모델에서도 설명했지만 spatial-temporal data에도 적용할 수 있다. GaAN은 RNN 기반 방법을 사용하여 dynamic spatial dependency를 학습하기 위해 attention mechanism을 적용했다. Attention function은 현재 시점의 입력값이 주어진 상황에서 서로 연결된 두 노드 간의 edge weight를 업데이트 한다. 
 
-- **Author github (MXNet)** : https://github.com/jennyzhang0215/GaAN
+- **[Author github (MXNet)](https://github.com/jennyzhang0215/GaAN)** 
 
 **5. ASTGCN (2019)[^51]**
 
 ASTGCN은 CNN 기반의 방법을 적용하여 sptial attention function과 temporal attention function을 적용하여 latent dynamic spatial dependency와 temporal dependency를 학습한다. 하지만 latent spatial dependency를 학습하기 위해서는 연결된 두개의 노드 마다 spatial dependency weight를 계산하기 위해 $$O(n^2)$$만큼의 시간 복잡도가 든다는 단점이 있다. 
 
-- **Author github (Pytorch)** : https://github.com/guoshnBJTU/ASTGCN-r-pytorch
+- **[Author github (Pytorch)](https://github.com/guoshnBJTU/ASTGCN-r-pytorch)**
 
 # Benchmark Dataset
 
