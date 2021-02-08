@@ -127,11 +127,11 @@ $$\begin{align*}
 
 위 과정을 거쳐 결과적으로 convolution의 두 함수간 곱은 두 함수의 Fourier transform 곱과 같다.
 
-$$f*g = \mathscr{F}\{\mathscr{F}\{f\}\cdot\mathscr{F}\{g\}\} \tag{7}$$
+$$f*g = \mathscr{F}^{-1}\{\mathscr{F}\{f\}\cdot\mathscr{F}\{g\}\} \tag{7}$$
 
 Graph에서 적용한 Fourier transform은 $$\mathscr{F}(\textbf{x})=\textbf{U}^T\textbf{x} = \hat{\textbf{x}}$$ 로 정의된다. 반대로 inverse Fourier transform은 $$\mathscr{F}^{-1}(\hat{\textbf{x}}) = \textbf{U}\hat{\textbf{x}}$$ 이다. 여기서 $$\textbf{x}$$는 각 node의 signal이다. 
 
-$$\textbf{x}*_{G}\textbf{g} =\mathscr{F}^-1(\mathscr{F}(\textbf{x})\odot \mathscr{F}(\textbf{g})) = \textbf{U}(\textbf{U}^T \textbf{x} \odot \textbf{U}^T \textbf{g}) \tag{8}$$
+$$\textbf{x}*_{G}\textbf{g} =\mathscr{F}^{-1}(\mathscr{F}(\textbf{x})\odot \mathscr{F}(\textbf{g})) = \textbf{U}(\textbf{U}^T \textbf{x} \odot \textbf{U}^T \textbf{g}) \tag{8}$$
 
 **식 (8)**은 filter $$\textbf{g}_\theta$$ 를 $$diag(U^T\textbf{g})$$으로 정의하였기 때문에 **식 (9)**와 같이 바꿀 수 있다. $$\textbf{g}_\theta$$는 학습 파라미터이다.
 
