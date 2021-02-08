@@ -22,7 +22,7 @@ $$L\textbf{x} = \lambda \textbf{x} \tag{2}$$
 
 $$\textbf{x}^TL\textbf{x}=\textbf{x}^T\lambda\textbf{x} = \lambda\textbf{x}^T\textbf{x} = \lambda \tag{3}$$
 
-$$L$$에 대한 eigenvalue는 graph signal 에서 spectrum 을 의미한다. 일반적으로 사용되는 PCA의 eigen decomposition 을 통해 사용하는 eigenvalue 는 내림차순으로 정렬하여 정보량이 많이 있는 eigenvector 를 사용하는 반면에 graph에서 $$L$$의 eigenvalue 이 나타내는 spectrum 은 노드 간의 similarity 를 말하기 때문에 차이가 적은(=eigenvalue 가 작은) 순서대로 오름차순 정렬하여 사용한다. 왜 $$L$$의 eigenvalue가 노드 간의 similarity를 나타내는지는 [여기](https://www.notion.so/Graph-Laplacian-Operator-df12eda3b6c34d33b5abe4b124b22134)에서 설명한다. $$L$$에 대한 공식은 식 (4)와 같다.  
+$$L$$에 대한 eigenvalue는 graph signal 에서 spectrum 을 의미한다. 일반적으로 사용되는 PCA의 eigen decomposition 을 통해 사용하는 eigenvalue 는 내림차순으로 정렬하여 정보량이 많이 있는 eigenvector 를 사용하는 반면에 graph에서 $$L$$의 eigenvalue 이 나타내는 spectrum 은 노드 간의 similarity 를 말하기 때문에 차이가 적은(=eigenvalue 가 작은) 순서대로 오름차순 정렬하여 사용한다. 왜 $$L$$의 eigenvalue가 노드 간의 similarity를 나타내는지는 [Spectral GCN 은… 사드세요 - Laplacian Operator](https://tootouch.github.io/research/spectral_gcn/#laplacian-operator)에서 설명한다. $$L$$에 대한 공식은 식 (4)와 같다.  
 
 $$L = D - A \tag{4}$$
 
