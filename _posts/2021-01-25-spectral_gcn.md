@@ -444,7 +444,7 @@ $$\begin{align*}
 &= 0
 \end{align*}$$
 
-$$\textbf{v}$$는 $$\textbf{L}$$의 eigenvector 이기 때문에 $$\textbf{D}^{1/2}\textbf{v}$$에 해당하는 $$\mathscr{L}$$의 eigenvalue는 0이다. 이 값이 가장 작은 eigenvalue 임을 보이기 위해서는 $$\mathscr{L}$$가 positive semi-definite 임을 알아야 한다. positive semi-definite은 모든 $$\textbf{x} \in \mathbb{R}^n$$에 대해 $$\textbf{x}^T\mathscr{L}\textbf{x}$$의 결과가 항상 0보다 크거나 같은 값을 나타내는 것을 말한다.
+$$\textbf{v}$$는 0의 값을 갖는 eigenvalue에 대응하는 $$\textbf{L}$$의 eigenvector 이기 때문에 $$\textbf{D}^{1/2}\textbf{v}$$에 해당하는 $$\mathscr{L}$$의 eigenvalue는 0이다. 이 값이 가장 작은 eigenvalue 임을 보이기 위해서는 $$\mathscr{L}$$가 positive semi-definite 임을 알아야 한다. positive semi-definite은 모든 $$\textbf{x} \in \mathbb{R}^n$$에 대해 $$\textbf{x}^T\mathscr{L}\textbf{x}$$의 결과가 항상 0보다 크거나 같은 값을 나타내는 것을 말한다.
 
 $$\begin{align*}
 \textbf{x}^T \mathscr{L} \textbf{x} &= \textbf{x}^T(\textbf{I} - \mathscr{A})\textbf{x} \\
