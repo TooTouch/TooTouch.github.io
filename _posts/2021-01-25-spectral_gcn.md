@@ -412,16 +412,16 @@ $$\begin{align*}
 
 **2. Normalized $$\textbf{A}$$의 eigenvalue 범위는 [0,2]이다.**
 
-먼저 normalized $$\textbf{A}$$ $$(\mathscr{A})$$와 normalizede $$\textbf{L}$$ $$(\mathscr{L})$$은 다음과 같이 정의할 수 있다.
+먼저 normalized $$\textbf{A}$$ $$(\mathscr{A})$$와 normalized $$\textbf{L}$$ $$(\mathscr{L})$$은 다음과 같이 정의할 수 있다.
 
 $$\mathscr{A} = \textbf{D}^{-1/2}\textbf{A}\textbf{D}^{-1/2}$$
 
-$$\mathscr{D} = \textbf{I} - \mathscr{A}$$
+$$\mathscr{L} = \textbf{I} - \mathscr{A}$$
 
 여기서 $$\mathscr{D}$$는 다음과 같이 풀어서 볼 수 있다.
 
 $$\begin{align*}
-\mathscr{D} &= \textbf{I} - \mathscr{A} \\
+\mathscr{L} &= \textbf{I} - \mathscr{A} \\
                    &= \textbf{D}^{-1/2}(\textbf{D} - \textbf{A})\textbf{D}^{-1/2} \\
                    &= \textbf{D}^{-1/2}\textbf{L}\textbf{D}^{-1/2}
 \end{align*}$$
@@ -481,7 +481,7 @@ $$\textbf{I}_n + \textbf{D}^{-1/2} \textbf{A} \textbf{D}^{-1/2}$$를 $$\textbf{S
 
 $$\textbf{S}_{1-order} = 2\textbf{I} - \mathscr{L}$$
 
-이때 $$\textbf{S}^{K}_{1-order}$$은 filter coefficient가 $$(2-\lambda_i)^K$$인 값을 가진다. 여기서 $$\lambda_i$$는 $$\mathscr{L}$$의 eigenvalue이다. **그림 (5)**를 보면 $$\lambda_i < 1$$ 에서 K가 커짐에 따라 filter coefficient의 값이 급격히 커짐을 알 수 있다[^2]. 
+이때 $$\textbf{S}^{K}_{1-order}$$은 filter coefficient가 $$(2I-\lambda_i)^K$$인 값을 가진다. 여기서 $$\lambda_i$$는 $$\mathscr{L}$$의 eigenvalue이다. **그림 (5)**를 보면 $$\lambda_i < 1$$ 에서 K가 커짐에 따라 filter coefficient의 값이 급격히 커짐을 알 수 있다[^2]. 
 
 <p align='center'>
     <img src='https://user-images.githubusercontent.com/37654013/105690922-ec7b1600-5f3f-11eb-8e5f-40421b01d59d.png'><br>그림 5. Simplifying GCN에서 실험한 augmented normalized adjacency의 효과
